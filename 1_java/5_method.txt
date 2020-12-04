@@ -1,0 +1,52 @@
+*Java에서의 메소드
+
+ 1. 메소드
+	1.1 기본 형태  
+		- 접근제한자 [static] 리턴type 메소드명([매개변수1, 매개변수2,..]){ 
+                                       //return이 없을 경우 리턴type은 void
+	                                  처리할 프로세스들
+	                                         [return 리턴값;]
+                                            }
+	             - 매개변수를 갖지 않는 함수
+		 - 매개변수를 갖는 함수
+		 - return값을 갖는 함수
+			**public 생략하면, public.
+			**private 면 불러올 명령어 필요함.
+ 
+ ex1) 
+package com.lec.ex;
+
+public class Arithmetic {
+	public int sumhod(int from, int to) {
+		int result = 0; // 누적할 변수
+		for (int i = from; i < to + 1; i++) {
+			result += i;
+		}
+		return result;
+	}
+
+	// method의 다용성, 같은 변수명으로 다른 method 만들 수 있다.
+	public int sumhod(int to) {
+		int result = 0;
+		for (int i = 1; i < to + 1; i++) {
+			result += i;
+		}
+		return result;
+	}
+
+	// evenOdd() method
+	public String evenOdd(int value) {
+		String result = (value % 2 == 0) ? "짝수입니다" : "홀수입니다.";
+		return result;
+	}
+	// 절대값 뽑는 method
+	public static int abs(int value) {
+		int result = (value>=0)? value : -value;
+//		if(value>=0) {
+//			result = value;
+//		}else {
+//			result = -value;
+//		}
+		return result;
+	}
+}
