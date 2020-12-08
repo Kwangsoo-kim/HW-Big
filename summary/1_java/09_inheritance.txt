@@ -1,0 +1,59 @@
+package com.lec.ex05_override;
+
+public class ParentClass {
+	//오버로딩 : 같은 이름의 생성자,매소드 인자타입이 다르면 중복정의 가능.
+	//생성자가 2개 :  생성자 함수의 오버로딩overloading(함수의 중복정의)
+	//method2가 2개 : 메소드 함수의 오버로딩(매개변수 변환으로 가능)
+	public ParentClass() {
+		System.out.println("P매개변수 없는 생성자");
+	}
+	public ParentClass(int i) {
+		System.out.println("P매개변수 있는 생성자");
+	}
+	public void method1() {
+		System.out.println("Parent의 method1()");
+	}
+	public void method2() {
+		System.out.println("Parent의 method2()");
+	}
+	public void method2(int i) {
+		
+	}
+}
+
+===============================================
+package com.lec.ex05_override;
+
+public class ChildClass extends ParentClass {
+	public ChildClass() {
+		System.out.println("C 매개변수 없는 생성자");
+	}
+	public ChildClass(int i) {
+		System.out.println("C 매개변수 있는 생성자");
+	}
+	@Override
+	public void method1() {//오버라이딩(함수의 재정의)
+		System.out.println("Child의 method1()");
+	}
+	public void method3() {
+		System.out.println("Child의 method3()");
+	}
+	
+}
+
+===============================================
+package com.lec.ex10;
+// 부모단의 클래스에 매개변수 없는 생성자가 없음
+public class Child extends Parent{
+	public Child(int i) {
+		super(i); //항상 매개변수 있는 부모단 생성자 호출
+	}
+
+
+}
+=================================================
+※	
+- final 변수 = 상수
+- final class 클래스명 {} 상속불가
+- final void 메서드명(){} 오버라이딩 금지
+
