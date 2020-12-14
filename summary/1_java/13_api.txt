@@ -1,0 +1,11 @@
+//String
+//String은 좋은 기능이 많으나 메모리를 과소비하여 실행속도를 늦추는 단점이있다.
+//이를 보안하여 나온것들이 있는데 StringBuffer,String Builder가 있다.
+//Calendar,GregorianCalendar,Date
+//Calendar는 싱글톤 클래스, GregorianCalendar는 일반클래스이다.
+//일반적으로 Date를 많이 사용하며, 편의를 위해 SimpleDateFormat과 같이 사용한다.
+
+
+
+
+//								201214
