@@ -1,0 +1,12 @@
+//Math 
+//수학 계산에 사용되는 Class 
+//Math.random()은 더블 타입의 임의의 수를 발생시키킨다. Math클래스의
+random()메소드가 static이기 때문에 Math.radom()의 형태로 바로 사용가능하다.
+//Random
+//랜덤 숫자를 구현하는 Class.
+//과거에는 Math.ramdom()을 많이 사용했으나, 최근은 Random클래스를 더 많이 사용한다고 한다.
+static이 아니기 때문에 객체를 생성하고 사용해야한다.
+//Object
+//to String과equals는 override가 가능하다.to String같은경우 빈번한 사용이 있다.
+
+//								201215
