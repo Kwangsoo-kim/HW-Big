@@ -8,5 +8,8 @@ random()메소드가 static이기 때문에 Math.radom()의 형태로 바로 사
 static이 아니기 때문에 객체를 생성하고 사용해야한다.
 //Object
 //to String과equals는 override가 가능하다.to String같은경우 빈번한 사용이 있다.
+//Wrapper
+//Wrapper는 객체 데이터이지만, 기초 데이터 처럼 사용가능하다.
+
 
 //								201215
