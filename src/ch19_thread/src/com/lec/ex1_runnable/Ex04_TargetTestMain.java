@@ -1,3 +1,4 @@
+//201221 kks runnable
 package com.lec.ex1_runnable;
 
 import java.lang.annotation.Target;

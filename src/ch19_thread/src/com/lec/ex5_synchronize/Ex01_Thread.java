@@ -1,3 +1,4 @@
+//201221 kks synchronize
 package com.lec.ex5_synchronize;
 
 //Thread N개 객체 1개 공유 - Runnable을 이용

@@ -1,3 +1,4 @@
+//201221 kks thread_example
 package com.lec.ex6_account;
 
 public class Account {

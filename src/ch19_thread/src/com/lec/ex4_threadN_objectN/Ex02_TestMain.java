@@ -1,3 +1,4 @@
+//201221 kks threadN_objectN
 package com.lec.ex4_threadN_objectN;
 
 public class Ex02_TestMain {

@@ -1,3 +1,4 @@
+//201221 kks threadN_objectN
 package com.lec.ex4_threadN_objectN;
 
 //Thread N개 객체 1개 공유 - Runnable을 이용

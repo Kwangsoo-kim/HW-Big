@@ -1,3 +1,4 @@
+//201221 kks thread_example
 package com.lec.ex6_account;
 //Account acc = new Account();
 //Runnable mom = new ATM_card(acc);

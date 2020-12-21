@@ -1,3 +1,4 @@
+//201221 kks thread
 package com.lec.ex2_thread;
 
 public class Ex01_Target extends Thread {

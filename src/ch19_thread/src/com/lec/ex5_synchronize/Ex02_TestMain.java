@@ -1,3 +1,4 @@
+//201221 kks synchronize
 package com.lec.ex5_synchronize;
 
 public class Ex02_TestMain {

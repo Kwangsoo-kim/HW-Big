@@ -1,3 +1,4 @@
+//201221 kks runnable
 package com.lec.ex1_runnable;
 
 public class Ex03_TestMain {
