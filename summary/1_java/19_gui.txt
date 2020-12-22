@@ -1,0 +1,6 @@
+//java의 api중 awt , swing을 사용한다. 사용자가 편리하게 프로그램을 사용하게 하는 역할을 하낟.
+//AWT 프레임 위에 패널이나 기타 다른 기능을 하는 필드를 올려 활용한다.
+//컴포넌트는 Frame 위에서 기본적으로 borderLayout으로 배치된다.
+//AWT는 기본적으로 컴포넌트 생성을 하고 이벤트처리 순서로 행한다.
+//이벤트 처리를 위해 ActionListener를 implemnets하고 객체를 만든 후 actionperformed 메소드 내에 구현한다.
+//Swing은 AWT보다 진보된 기능이나, 좀 세련된 디자인 외에는 특별한 차이는 없다.
