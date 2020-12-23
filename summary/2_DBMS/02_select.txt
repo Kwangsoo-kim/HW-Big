@@ -1,0 +1,27 @@
+// SQL 문장 작성법!
+	- SQL문장은 대소문자 구분을 하지는 않으나 일반적으로 대문자를 사용한다.
+	- 테이블안에 데이터들은 대소문자 구분한다.
+	- 명령어의 끝은 ;
+	
+//기본 DML 형태
+
+EX ) SELECT [DISTINCT] {*, column [Alias], ….} FROM 테이블명 [WHERE condition] [ORDER BY {column, expression} [ASC|DESC]] ;
+
+
+SELECT : 원하는 컬럼 선택
+*	: 테이블의 모든 column 출력
+alias(=AS): 해당 column에 대한 다른 이름 부여
+DISTINCT: 중복 행 제거 옵션
+FROM  : 원하는 데이터가 저장된 테이블 명을 기술
+WHERE : 조회되는 행을 제한하기 위한 조건 추가
+condition : column, 표현식, 상수 및 비교연산자 
+	-BETWEEN a AND b : a 부터 b (a,b포함)
+	-LIKE pattern : 두가지 와일드 카드 사용 
+		- % : 문자가 없거나, 하나 이상의 문자가 어떤 값이 와도 상관없다.
+		­  _ : 하나의 문자가 어떤 값이 와도 상관없다
+	-IS NULL : null값을 가졌다.
+ORDER BY:정렬을 위한 옵션 (ASC :오름차순이며 default, DECS 내림차순)
+
+
+
+							201223 KKS
