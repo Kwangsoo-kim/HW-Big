@@ -1,0 +1,19 @@
+// sequence
+
+	1. 특징	- 기본 테이블에서 인조 primary key 생성시 주로사용
+		- 여러 테이블에 의해 공유 가능
+		- 오라클 내부 루틴에 의해서 발생되고 증가,감소
+
+	2. 문법	- CREATE SEQUENCE sequence_name
+			[INCREMENT BY n]  [START WITH n] 
+			- 증가량 		,    -시작점
+			[MAXVALUE n] [MINVALUE n]
+			- 최대값	       ,   - 최소값
+			[CYCLE | NOCYCLE]
+			- 최대값 도달시 다시 시작 할 것인지
+			[CACHE n | NOCACHE];
+			- 시스템 캐쉬, 대부분 NO로
+
+
+
+//201231kks
