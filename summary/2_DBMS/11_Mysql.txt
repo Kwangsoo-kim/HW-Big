@@ -1,0 +1,28 @@
+// Mysql
+	
+	
+	- Oracle DB와 큰 차이점이라면, 로그인 후 USE 명령어를 사용하여
+		데이터베이스에 들어가야 작업이 가능한점이 있다.
+		그 외로 자료형에서 NUMBER 대신 INT, NUMERIC을 사용하고
+		VARCHAR2 대신 VARCHAR를 사용한다.
+		CREATE TABLE에 있어서 시퀀스가 없고 대신에 auto_increment를 사용한다.
+		Oracle 처럼 foreign 키를 자료형 옆에 쓰면 적용되지않는다. 따라서 하단에 쓴다.
+		일반적으로 Mysql에서는 create table 하단에 제약조건을 건다.
+
+	- 칼럼 함수
+		- concat : oracle과 다르게 내용물 2개이상 추가 가능.
+		- from 절 없이도 실행가능.
+		- date_format에서 포맷 글자
+			-- %y(년도 2자리), %Y(년도 4자리)
+			-- %M(월이름), %m(월 앞에0)
+			-- %b(짧은 월 이름), %c(월수)
+			-- %e(일), %d(앞에0)
+			-- %H (24시간), %h(12시간), %p(오전,오후), %i(분), %s(초)
+		- if절 : java의 삼항연산자 비슷하게 사용가능하다.
+
+	- TOP-N 구문
+		- 일반적으로 order by 절 뒤에 limit 명령어로 사용한다
+		- limit n(1등~n등까지)
+		- limit n1,n2(n1등에서~n2등까지) **n1은 0부터 시작한다.
+
+//210105 kks
