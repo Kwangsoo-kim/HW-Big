@@ -1,0 +1,16 @@
+// JDBC 프로그래밍
+	
+	- JDBC : 자바 데이터베이스 프로그래밍 API
+	- JDBC 프로그래밍 단계와 사용 클레스
+		- 1 단계 JDBC 드라이버 로드	: Class.forName()이용 
+		- 2 단계 데이터베이스 연결	: 
+			DriverManager.getConnection(접속 URL,id,password)을 이용			
+		- 3 단계 Statement 생성	: createStatement()을 이용
+		- 4 단계 SQL문 전송	: executeQuery(),executeUpdate() 이용
+		- 5 단계 결과받기		: ResultSet 객체로 받는다.
+		- 6 단계 로직수행		: 원하는 로직을 수행(필요할 때 까지)
+		- 7 단계 연결해제		: close() 이용
+
+//210106 kks	  	
+
+	
