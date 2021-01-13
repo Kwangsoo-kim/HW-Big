@@ -1,0 +1,28 @@
+// JDBC 프로그래밍
+	
+	- PreparedStatement 인터페이스 이용
+		String sql_query = “insert into dept values (?,?,?);
+		PreparedStatement pstmt = conn.preparedStatement(sql_query);
+		setXXX(int 순서, 실제 데이터나 변수);
+	
+	- DAO(Data Access Object)
+ 		- 데이터베이스 관련 작업을 전담하는 클래스
+  		- 데이터베이스에 연결하여, 입력 , 수정, 삭제, 조회 등의 작업을 하는 클래스
+  		- CRUD 작업
+   		C: Create => insert
+   		R: Read => select 
+  		U: Update
+   		D: Delete
+
+	- DTO(Data Transfer Object), VO(Value Object), Bean
+
+  		- 데이터 전달 단위, 객체를 표현하는 단위
+  		- 보통 테이블의 컬럼들을 멤버변수로 처리한다.
+  		- 캡슐화된 객체여야 함(멤버변수는 private 으로, public getter/setter 필수)
+
+
+
+
+//210108 kks	  	
+
+	
