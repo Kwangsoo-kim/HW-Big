@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function chk() {
+            if (frm.name.value.length < 2) {
+                alert("이름은 2글자 이상 입력해 주세요");
+                frm.name.focus();
+                return false;
+            } else if (frm.id.value.length < 4) {
+                alert("아이디는 4글자 이상 입력해 주세요");
+                frm.id.focus();
+                return false;
+            } else if (frm.pw.value.length < 1) {
+                alert("비밀번호는 1글자 이상 입력해 주세요");
+                frm.pw.focus();
+                return false;
+            } else if (frm.pw.value != frm.pwC.value) {
+                alert("비밀번호를 확인해 주세요");
+                frm.pwc.focus();
+                return false;
+            }
+        }
+    </script>
+    <link href="ex1.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form name="frm" onsubmit="return chk()">
+        <table>
+            <caption><h2>회원가입</h2></caption>
+            <tr>
+                <th>이 름<b>*</b></th>
+                <td> <input type="text" placeholder="2글자 이상" name="name" required="required" /></td>
+            </tr>
+            <tr>
+                <th>아이디<b>*</b></th>
+                <td> <input type="text"  name="id" required="required" /></td>
+            </tr>
+            <tr>
+                <th>비밀번호<b>*</b></th>
+                <td> <input type="password" name="pw" required="required" /></td>
+            </tr>
+            <tr>
+                <th>비밀번호 확인<b>*</b></th>
+                <td> <input type="password"  name="pwC" required="required" /></td>
+            </tr>
+            <tr>
+                <th>이메일<b>*</b></th>
+                <td> <input type="email" placeholder="xxx@xxx.xxx xxx@xxx.xx.xx" name="email" required="required"
+                            pattern="[a-zA-Z가-힣]+@\w+\.[a-zA-Z]{2.3}\.*[a-zA-Z]*"/></td>
+            </tr>
+            <tr>
+                <th>전화<b>*</b></th>
+                <td> <input type="tel" placeholder="xxx-xxxxx-xxxx xxx-xxx-xxxx" name="tel" required="required"
+                            pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><hr /></td>                
+            </tr>
+            <tr>
+                <th colspan="2">추가 입력 사항</th>
+            </tr>
+            <tr>
+                <th>
+                출신지역
+                </th>
+                <td>
+                    <select>
+                        <option>서울</option>
+                        <option>인천</option>
+                        <option>대전</option>
+                        <option>대구</option>
+                        <option>부산</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>결혼유무</th>
+                <td>
+                    <input type="radio" name="marry" value="married" />기혼
+                    <input type="radio" name="marry" value="not married" />미혼
+                </td>
+            </tr>
+            <tr>
+                <th>자식유무</th>
+                <td>
+                    <input type="radio" name="child" value="ok" />있다
+                    <input type="radio" name="child" value="no" />없다
+                    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><hr /></td>
+                
+            </tr>
+            <tr>
+                <th colspan="2"><input type="submit" value="제출" />
+                <input type="reset" value="초기화" /></th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
