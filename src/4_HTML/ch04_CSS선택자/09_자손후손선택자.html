@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #header,#wrap,#footer{
+            width:600px; margin:0 auto; border:1px solid gray;
+        }
+        #header{overflow:hidden;}
+        #header .logo{ /*후손 선택자*/
+            float:left; padding:10px 30px 10px 100px;
+        }
+        #header > .copy{  /*자손 선택자*/
+            float:left; padding: 17px 100px 10px 30px;
+        }      
+        div p {/*스페이스만 쓰는 후손 선택자 = 자손 선택자 포함*/
+            font-size:25px;        
+        }
+        div > p{/*자손 선택자*/
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+        <div class="copy">
+            <h2>00주식회사</h2>
+        </div>
+
+    </div>
+    <div id="wrap">
+        <p>
+            내년도 정부예산 2134억 원 확보 위해 두 달 앞서 추진기획단 운영
+
+            [신문웅(태안신문) 기자]
+
+            충남 태안군이 지난 7일 군청 중 회의실에서 '2022년 정부예산확보 전략보고회'를 열고 주요전략사업 및 현안사업 추진에 따른 예산확보 방안을 논의하는 등 내년도 정부예산 확보를 위한 선제적·체계적 대응에 나섰다.
+
+            이러한 선제적 대응에는 이유가 있다. 국가와 지자체가 모든 예산 집행의 우선순위를 코로나19의 예방과 위기 극복에 투입하고 있으며, 정부의 미반영과 예산의 감액으로 전년도 대비 정부예산 확보액이 감소했기 때문이다.
+
+            이날 보고회에서 군은 2022년 국비 예산 확보 사업은 89건에 2134억 원(군 자체 76건 1627억 원, 타 기관 13건 507억 원)으로 정했다. 또한 신규사업(26건 753억 원), 계속사업(63건 1381억 원)으로 나누고 재원별로는 국비 1680억 원(78.7%), 도비 454억 원(21.3%)을 제시했다.
+        </p>
+        <ul>
+            <li><p>LOOOOOOOOOOOOOOOOOOOOOOOOOL</p></li>
+            <li><p>LOOOOOOOOOOOOOOOOOOOOOOOOOL</p></li>
+            <li><p>LOOOOOOOOOOOOOOOOOOOOOOOO0L</p></li>
+        </ul>
+        <div id="footer">
+            <p>서울시 마포구</p>
+        </div>
+    </div>
+</body>
+</html>

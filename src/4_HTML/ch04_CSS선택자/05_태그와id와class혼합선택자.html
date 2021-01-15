@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div {
+            border: 1px solid lightgray;
+        }
+
+        #header {
+            width: 600px;
+            margin: 0 auto;
+            background-color: yellow;
+            text-align: center;
+        }
+
+        #warp {
+            overflow: hidden;
+            width: 600px;
+            margin: 0 auto;
+            background-color: aqua;
+        }
+
+        #warp #content {
+            text-align: center;
+            width: 350px;
+            float: left;
+            height: 400px;
+        }
+
+        #warp #content ul li.menu1 {
+            font-size: 1.5em; /*글씨 크기를 1.5배*/
+        }
+
+        #warp #content ol li.menu2,  
+        #warp #content ol li.menu4 {
+            font-weight: bold; /*글씨 진하게 */
+        }
+
+        #warp #side_banner {
+            text-align: center;
+            width: 246px;
+            float: right;
+            height: 400px;
+        }
+
+            #warp #side_banner img {
+                width: 200px;
+            }
+
+        #footer {
+            width: 600px;
+            margin: 0 auto;
+            background-color: yellow;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>HEADER</h1>
+    </div>
+    <div id="warp">
+        <div id="content">
+            <h2>CONTENT</h2>
+            <ul>
+                <li class="menu1">menu1</li>
+                <li class="menu2">menu2</li>
+                <li class="menu1">menu3</li>
+            </ul>
+             <ol>
+                <li class="menu1">menu1</li>
+                <li class="menu2">menu2</li>
+                <li class="menu1">menu3</li>
+            </ol>
+        </div>
+        <div id="side_banner">
+            <h2>BANNER</h2>
+            <a href="http://daum.net" target="_blank">
+                <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" alt="다음아이콘" />
+            </a>
+        </div>
+    </div>
+    <div id="footer">
+        <h1>FOOTER</h1>
+    </div>
+</body>
+</html>

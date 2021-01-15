@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+
+      div{
+           width:1000px; margin:0 auto;
+           
+       }
+        div#content .left,div#content .center,div#content .right {
+            height: 300px;
+        }
+       #header,#content,#footer{
+           overflow:hidden;
+       }
+        #header .left ,#content .left,#footer .right{
+            width: 150px;
+            float: left;
+            border: 1px solid gray;
+            height: 150px;
+            border-radius: 20px 0 20px 0;
+            background-color:lightgray;
+        }
+        #header .center, #content .center, #footer .center {
+            width: 693px;
+            float: left;
+            border: 1px solid gray;
+            height: 150px;
+            border-radius: 0 0 20px 20px;
+            background-color: lightgray;
+        }
+
+        #header .right, #content .right, #footer .left {
+            width: 150px;
+            float: left;
+            border: 1px solid gray;
+            height: 150px;
+            border-radius: 0 20px 0 20px;
+            background-color: lightgray;
+        }
+         #content .left {
+            border-radius: 0 20px 20px 0;
+        }
+        #content .right {
+            border-radius: 20px 0 0 20px;
+            
+        }
+        #content .right ul {
+                list-style: none;
+                padding:0 0 0 15px;
+        }
+        #content .right ul li{
+            font-size:15px;
+            
+        }
+        #content .right ul li span{
+            
+            color:red;
+        }
+        #content .center {
+            border-radius: 20px 20px 20px 20px;
+        }
+        
+        #footer .center{
+            border-radius: 20px 20px 0 0;
+        }
+        #content .center  ul{
+            overflow:hidden;
+            list-style:none;
+        }
+        #content .center li{
+            float:left;
+            padding: 20px 20px 20px 20px ;
+        }
+        #content .center h2{
+            text-align:center;
+            padding: 40px 0 0 0; 
+        }
+        #content .center #t1{
+            text-align:center;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <div id="header">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </div>
+    <div id="content">
+        <div class="left"></div>
+        <div class="center">
+            <p>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+            </p>
+            <p><h2>빅데이터 UI 전문가 양성</h2></p>
+            <p id="t1">본 과정은 좋다. 아주 좋다. 친구들 좋다</p>
+
+
+
+
+
+
+
+
+        </div>
+        <div class="right">
+           <ul>
+               <li>1. 태그</li>
+               <li>2. 전체(*)</li>
+               <li>3. id,class</li>
+               <li>4. 속성</li>
+               <li>5. 후손,자손(>)</li>
+               <li>6. 동위</li>
+               <li>7. 반응</li>
+               <li>8. 상태</li>
+               <li>9. 구조</li>
+               <li><span>10. 문자</span></li>
+               <li><span>11. 링크</span></li>
+               <li><span>12. 부정</span></li>
+           </ul>
+     
+        </div>
+    </div>
+    <div id="footer">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </div>
+        </div>
+</body>
+</html>
