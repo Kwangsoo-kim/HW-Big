@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div {
+            border: 1px solid gray;
+        }
+
+        #bgi {
+            width:800px;
+            margin:0 auto;
+            border: none;
+            position: relative;
+        }
+        #bgi2{
+            border:none;
+            position: absolute;
+            width:800px;
+            height:600px;
+            background-image:url(0118/sulhyun.jpg) ;
+            opacity:0.3;
+            background-size:contain;
+            z-index:-999;
+        }
+        #wrap {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        #header {
+            margin: 5px;
+            text-align: center;
+            background-color: lightyellow;
+            height: 100px;
+            line-height: 100px;
+        }
+
+        #nav {
+            margin: 0 5px 5px 5px;
+            text-align: center;
+        }
+
+            #nav ul {
+                overflow: hidden;
+            }
+
+                #nav ul li {
+                    width: 120px;
+                    float: left;
+                    list-style: none;
+                    margin: 0 10px;
+                    background-color: #fbc3c3
+                    
+                }
+
+                    #nav ul li a {
+                        color: purple;
+                        font-weight: bold;
+                        text-decoration: none;
+                        display: block;
+                        padding: 10px 0;
+                    }
+
+                    #nav ul li:first-child {
+                        border-radius: 20px 0 0 20px;
+                    }
+
+                    #nav ul li:last-child {
+                        border-radius: 0 20px 20px 0;
+                    }
+
+        #wrap2 {
+            margin: 5px;
+            overflow: hidden;
+            height: 300px;
+        }
+
+            #wrap2 #content {
+                text-align: center;
+                float: left;
+                margin: 5px;
+                height: 288px;
+                width: 630px;
+            }
+
+            #wrap2 #banner {
+                text-align: center;
+                float: left;
+                margin: 5px 5px 5px 0;
+                height: 288px;
+                width: 138px;
+            }
+
+        #footer {
+            margin: 0 5px 5px 5px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="bgi">
+        <div id="bgi2"></div>
+        <div id="wrap">
+            <div id="header">HEADER</div>
+            <div id="nav">
+                <p>NAVIGATION</p>
+                <ul>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                    <li><a href="#">menu4</a></li>
+                    <li><a href="#">menu5</a></li>
+                </ul>
+            </div>
+            <div id="wrap2">
+                <div id="content">CONTENT</div>
+                <div id="banner">BANNER</div>
+            </div>
+            <div id="footer">FOOTER</div>
+        </div>
+    </div>
+</body>
+</html>

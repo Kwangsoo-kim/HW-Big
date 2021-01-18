@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div#wrap{
+            width:800px;
+            margin:0 auto;
+        }
+        #header{
+            text-align:center;
+            border-bottom:1px solid #cccccc;
+        }
+        #content p:nth-child(2)::first-line,
+        #content p:nth-child(3)::first-line{ /* 문자 선택자*/
+            color:blue; 
+            font-weight:bold;
+            font-size:20px;
+        }
+        #content p:nth-child(2)::first-letter{
+            font-size:2em; /*글씨크기를 원래 사이즈의 2배*/
+        }
+        #content p:last-child span{/*문자선택자를 모를 경우*/
+            font-size:2em;
+        }
+        #content p:nth-child(2)::selection{
+            background-color:violet;
+            color:yellow;
+        }
+        #footer ul{
+            border-top : 1px solid #cccccc;
+            overflow:hidden;
+        }
+        /*block 태그를 수평으로*/
+        #footer ul li{
+            list-style:none;
+            float:left;
+            margin:5px 25px ;
+            padding: 20px 0 0 0;
+        }#footer ul li:first-child{
+             /*padding: 10px 0 0 0; 아래랑 똑같다.*/
+             padding-top : 30px;
+         }
+         }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>제목이나 회사명</h1>
+        </div>
+        <div id="content">
+            <p>이들은 산속으로 피해 무장대의 기본성원이 되어 양반지주나 관청을 습격했는데, 지배층들은 이들을 「도적」이라 했다.</p>
+            <p>
+                이재용 삼성전자 부회장에 대한 파기환송심 선고가 오늘(18일) 내려집니다. 국정농단 사건으로 재판에 넘겨진 이 부회장은 지난 2018년 2월 항소심에서 징역 2년 6개월에 집행유예 4년을 선고받고 풀려났습니다. 하지만 대법원은 정유라 씨의 말 구입비 34억 원 등 86억 원가량을 이 부회장의 뇌물 공여 액수로 판단했습니다. 이에 따라 진행된 파기환송심에서 오늘 실형이 선고돼 다시 수감될지, 아니면 집행유예를 선고받을지 주목됩니다. 재계에서는 이 부회장을 선처해달라는 탄원서를 재판부에 잇따라 제출했습니다.
+            </p>
+            <p>
+                <span>이</span>재용 삼성전자 부회장에 대한 파기환송심 선고 공판이 서울 고등법원에서 오후 2시에 열립니다.이 부회장은 경영권 승계를 도와달라며 전직 대통령 박근혜 씨와 최서원으로 이름을 바꾼 최순실 씨에게 뇌물을 준 혐의로 재판에 넘겨졌습니다.1심 재판부는 이 부회장이 건넨 뇌물액을 89억 원으로 보고 징역 5년을 선고했습니다.반면 2심에선 36억 원만 뇌물에 해당한다고 판단해 집행유예를 선고했습니다.[이재용/삼성전자 부회장 (2018년 2월) : 좋은 모습 못 보여드린 점 다시 한 번 죄송하게 생각하고 있습니다. 1년 동안 저를 돌아볼 수 있는 정말 소중한 시간이 됐습니다.이후 대법원 전원합의체는 최씨의 딸 정유라 씨의 말 구입비 등 2심에서 무죄로 본 50억 원도 뇌물로 봐야 한다면서 사건을 고등법원으로 돌려보냈습대법원 결정대로라면 뇌물액이 1심보다는 적고 2심보다는 많은 86억 원대로 늘어이 부회장이 다시 구속될 수도 있는특검은 지난 결심 공판에서 징역 9년을 선고해달라고  하지만 삼성 준법감시위원회 활동이 양형에 반영된다면 집행유예가 나올 가능성도 있이 부회장 측은 박씨 등이 뇌물을 강요했다면서, 무노조 원칙 폐기 등 앞으로 준법 경영을 이어갈 테니 선처해달라고 호소했습니다.대한상공회의소와 벤처기업협회 등 재계에서도 재판부에 탄원서를 제출했습니다.
+            </p>
+        </div>
+        <div id="footer">
+            <ul>
+                <li>
+                    <img src="0115/logo.png" alt="로고" />
+                </li>
+                <li>
+                    <img src="0115/address.png" alt="주소" />
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

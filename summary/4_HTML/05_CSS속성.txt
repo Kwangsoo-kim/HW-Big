@@ -1,0 +1,25 @@
+// CSS 속성들
+	
+	1. 문자단위들 : px, %, pt, em
+	2. Background-image : url(주소값)을 통하여 이미지를 불러온다.
+			- position, size, reqeat ...
+	3. Display 속성 : block , inline, inline-block, none
+	4. Visibility 속성 : visibility:hidden은 공간을 확보하고 안보이나,
+			display:none은 공간도 사라진다.
+	6. opacity 속성 : 투명도를 조절한다.
+	7. margin,padding 속성 : margin은 밖여백을, padding을 안여백을 만들어준다.
+	8. box-sizing 속성 : 보더를 밖으로 내는게 아니라 안으로 냄으로써 크기를 유지시켜준다.
+			일반적으로 스마트폰, 휴대기기에 사용되는 어플에 이용.
+	9. border 속성 : width,style,color 경계선을 만들어준다.
+	10. 글자 관련된 속성들 : font-family, font-size, font-style, font-weight, text-decoration
+			line-height(행간 조정 혹은 세로축 가운데 정렬),text-align(글자 가운데 정렬)
+	11. position 속성 	- absolute : 절대 좌표값
+			- fixed : 좌표값 고정
+			- static : 기본값
+			- relative : 상대 좌표값
+	12. float 속성 : position 속성과 함께 요소의 위치를 설정하기 위한 속성
+		일반적으롭 부모단에 overflow사용하여 위치설정에 이용된다.
+	13. gardient 속성 : 2가지 이상의; 색을 표현할 때 사용되는 속성.
+
+
+// 210118 kks
