@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=0.7" />
+    <title></title>
+    <style>
+        /***************초기화*****************/
+        *{
+            padding:0;
+            margin:0;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial;
+        }
+        li{
+            list-style:none;
+        }
+        a{
+            text-decoration:none;
+        }
+        /***************헤더*****************/
+        header{
+            height:100px;
+            background-color:#ea8f00;
+        }
+        /*************** 헤더의 logowrap *****************/
+        header #logo_wrap{
+            height:50px;
+            line-height:50px;
+            text-align:center;
+            position:relative;
+        }
+         header #logo_wrap a{
+            color:white;
+            font-weight:bold;
+            font-size:1.3em;
+        }
+        header #logo_wrap img.menu{
+            position:absolute;
+            top:0;
+            left:10px;
+        }
+        header #logo_wrap img.myinfo{
+            position:absolute;
+            top:0;
+            right:10px;
+        }
+        /*************** 헤더의 search *****************/
+        header #search{
+            height:50px;
+            line-height:50px;
+            position:relative; /*돋보기 백그라운드 이미지*/
+        }
+        header #search input[name=query_word]{
+            width:100%;
+            height:50px;
+            border: 3px solid #ea8f00;
+            outline:3px solid #ea8f00;
+            box-sizing : border-box;
+            padding: 5px 55px 5px 5px;
+            font-size:1.3em;
+        }
+        header #search input[type=submit]{
+            background:url(0121_imgEx2/search.png);
+            width:50px;
+            height:50px;
+            border:0;
+            outline:0;
+            position:absolute;
+            top:0;
+            right:0;
+        }
+        /***************lnb*****************/
+        #lnb ul{
+           overflow:hidden;
+           margin:7px 0;
+           text-align:center;
+        }
+        #lnb ul li{
+            float:left;
+            width:16.6%;
+            height:40px;
+            line-height:40px;
+            border-right:1px solid #ea8f00;
+            box-sizing:border-box;
+        }
+         #lnb ul li:last-child{
+             border:0;
+         }
+        /*************** section1 *****************/
+        #section1 .row1,
+        #section1 .row2,
+        #section1 .row3{
+            overflow:hidden;
+        }
+        .row1 div,
+        .row2 div,
+        .row3 div{
+            float:left;
+            width:50%;
+            height:135px;
+            border:2px solid white;
+            box-sizing:border-box;
+        }
+        #section1 img{
+            width:100%;
+            height:100%;
+        }
+        /*************** section2 *****************/
+        #section2{
+            margin:7px 0;
+        }
+        #section2 ul li{
+            padding:8px;
+            border:1px solid #cccccc;
+            /*말줄임 태그*/
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+         #section2 ul li a{
+             color:black;
+             font-size:12px;
+         }
+        /*************** section3 *****************/
+        #section3 ul li{
+            border:1px solid #cccccc;
+            height:120px;
+            padding:10px;
+            margin:7px;
+            position:relative;
+        }
+        #section3 ul li p.img{
+            position:absolute;
+            top:10px;
+            left:10px;
+            width:100px;
+            height:100px;
+        }
+        #section3 ul li p.txt{
+            width:100%-20px;
+            padding:10px 0 10px 120px;
+        }
+        #section3 ul li p.txt span:first-child{
+            font-weight:bold;
+            color:darkblue;
+            display:block;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            font-size:1.2em;
+        }
+        #section3 ul li p.txt span:last-child{
+             color:black;
+             font-size:12px;
+        }
+        footer{
+            background-color:#ea8f00;
+            text-align:center;
+        }
+        footer p:last-child{
+            margin:0 0 10px 0;
+            padding:10px;
+            font-size:12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo_wrap">
+            <img src="0121_imgEx2/menu.png" class="menu" alt="메뉴 아이콘" />
+            <a href="ex2.html" class="logo">mobile logo</a>
+            <img src="0121_imgEx2/myinfo.png" class="myinfo" alt="내정보" />
+        </div>
+        <div id="search">
+            <form>
+                <input type="text" name="query_word" />
+                <input type="submit" value=" " />
+            </form>
+        </div>
+    </header>
+    <div id="lnb">
+        <ul>
+            <li><a href="#">lnb1</a></li>
+            <li><a href="#">lnb2</a></li>
+            <li><a href="#">lnb3</a></li>
+            <li><a href="#">lnb4</a></li>
+            <li><a href="#">lnb5</a></li>
+            <li><a href="#">lnb6</a></li>
+        </ul>
+    </div>
+    <div id="section">
+        <div id="section1">
+            <div class="row1">
+                <div><a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=001&oid=011&aid=0003859838"><img src="http://placehold.it/100x100 " alt="1행 1열" /></a></div>
+                <div><a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=011&aid=0003859674"><img src="http://placehold.it/200x200 " alt="1행 2열" /></a></div>
+            </div>
+            <div class="row2">
+                <div><a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=016&aid=0001781728"><img src="http://placehold.it/300x200 " alt="2행 1열" /></a></div>
+                <div><a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=277&aid=0004832275"><img src="http://placehold.it/400x200 " alt="2행 2열" /></a></div>
+            </div>
+            <div class="row3">
+                <div><a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=018&aid=0004833792"><img src="http://placehold.it/500x200 " alt="3행 1열" /></a></div>
+                <div><a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=421&aid=0005119243"><img src="http://placehold.it/600x200 " alt="3행 2열" /></a></div>
+            </div>
+        </div>
+        <div id="section2">
+            <ul>
+                <li><a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=001&oid=018&aid=0004833811">CJ 뚜레쥬르, 美사모펀드 칼라일에 매각 임박</a></li>
+                <li><a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=001&oid=008&aid=0004531604">[장외주식] 진켐 상승세</a></li>
+                <li><a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=001&oid=014&aid=0004569050">제네시스 고의 훼손 후 유튜브에 제보..현대차 협력업체 직원 실형제네시스 고의 훼손 후 유튜브에 제보..현대차 협력업체 직원 실형</a></li>
+                <li><a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=001&oid=005&aid=0001402923">SK디앤디 단기차입금 600억원 증가</a></li>
+            </ul>
+        </div>
+        <div id="section3">
+            <ul>
+                <li>
+                    <p class="img"><img src="http://placehold.it/100x100" /></p>
+                    <p class="txt">
+                        <span>첫번째 span은 말줄임 할 예정입니다.첫번째 span은 말줄임 할 예정입니다.첫번째 span은 말줄임 할 예정입니다.첫번째 span은 말줄임 할 예정입니다.</span>
+                        <span>두번째 span은 말줄임 안 할 예정입니다.두번째 span은 말줄임 안 할 예정입니다.두번째 span은 말줄임 안 할 예정입니다.</span>
+                    </p>
+                </li>
+                <li>
+                    <p class="img"><img src="http://placehold.it/100x100" /></p>
+                    <p class="txt">
+                        <span>첫번째 span은 말줄임 할 예정입니다.첫번째 span은 말줄임 할 예정입니다.첫번째 span은 말줄임 할 예정입니다.첫번째 span은 말줄임 할 예정입니다.</span>
+                        <span>두번째 span은 말줄임 안 할 예정입니다.두번째 span은 말줄임 안 할 예정입니다.두번째 span은 말줄임 안 할 예정입니다.</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p><img src="0121_imgEx2/logo.png" alt="회사로고" /></p>
+        <p>서울시 마포구 노고산동 XX빌딩 704호</p>
+    </footer>
+</body>
+</html>
