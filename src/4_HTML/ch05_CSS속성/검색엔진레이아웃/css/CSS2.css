@@ -1,0 +1,274 @@
+﻿* {
+    padding: 0;
+    margin: 0 auto;
+    font-family: 'Fraunces', serif;
+}
+/*header*/
+header {
+    width: 100%;
+    min-width: 1200px;
+    height: 140px;
+    line-height: 30px;
+    margin: 0 0 10px 0;
+    overflow: hidden;
+}
+/*header_nav*/
+#header_nav {
+    width: 100%;
+    min-width: 1200px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #2d1152;
+    font-size: .9em;
+    margin: 0 auto;
+}
+
+.gnb {
+    width: 700px;
+    height: 30px;
+    float: left;
+}
+
+.survivalFootball {
+    color: white;
+    width: 250px;
+    height: 30px;
+    float: right;
+}
+
+    .survivalFootball img {
+        width: 20px;
+        height: 20px;
+    }
+
+.gnb ul li {
+    float: left;
+    text-align: center;
+    width: 65px;
+    list-style: none;
+}
+
+    .gnb ul li a {
+        color: white;
+        text-decoration: none;
+    }
+/*header_info*/
+#header_info {
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    overflow: hidden;
+}
+
+    #header_info .logo {
+        width: 250px;
+        height: 98px;
+        float: left;
+        padding: 20px 0 0 0;
+    }
+
+        #header_info .logo img {
+            float: right;
+            margin: 0 15px 0 0;
+        }
+
+    #header_info .search {
+        width: 560px;
+        height: 98px;
+        line-height: 98px;
+        float: left;
+    }
+
+#bar {
+    width: 398px;
+    height: 45px;
+    margin: 0 auto;
+    padding: 0 0 0 15px;
+    border: 1px solid #3488d9;
+}
+
+#submit {
+    background-image: url('../img/btn.png');
+    width:124px;
+    height:37px;
+    outline: 0;
+    border:0;
+    cursor:pointer;
+    color: white;
+}
+
+#header_info .service {
+    width: 280px;
+    height: 98px;
+    line-height: 98px;
+    padding: 0 0 0 20px;
+    float: left;
+}
+
+.service ul li {
+    float: left;
+    width: 75px;
+    height: 45px;
+    list-style: none;
+    text-align: center;
+}
+
+    .service ul li a {
+        text-decoration: none;
+        color: #2d1152;
+    }
+/*content*/
+#content {
+    max-width: 1200px;
+    min-width: 1200px;
+    height: 948px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+    #content #ca {
+        width: 991px;
+        height: 946px;
+        margin: 0 auto;
+    }
+    #content #main_menu {
+        float: left;
+        width: 155px;
+        height: 448px;
+        margin: 0 3px 0 0;
+        padding: 10px 0 0 0;
+    }
+
+    #content #main {
+        float: left;
+        width: 600px;
+        height: 998px;
+        margin: 0 3px 0 0;
+        padding: 10px 0 0 0;
+    }
+
+    #content #main_banner {
+        float: left;
+        width: 230px;
+        height: 800px;
+        padding: 10px 0 0 0;
+    }
+/*main_menu*/
+#main_menu ul {
+    width: 153px;
+    height: 446px;
+    margin: 0 auto;
+}
+
+    #main_menu ul li {
+        width: 151px;
+        height: 44.4px;
+        line-height: 44.4px;
+        text-align: center;
+        list-style: none;
+    }
+
+        #main_menu ul li a {
+            text-decoration: none;
+            color: black;
+        }
+/*main*/
+#main .mbig {
+    width: 598px;
+    height: 298px;
+    border: 1px solid #cccccc;
+    margin: 0 0 3px 0;
+}
+
+#main .mslide {
+    width: 598px;
+    height: 148px;
+    border: 1px solid #cccccc;
+    margin: 0 0 3px 0;
+}
+
+#main .mlnb {
+    width: 600px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #500095;
+    margin: 0 0 3px 0;
+}
+
+.mlnb ul li {
+    float: left;
+    width: 100px;
+    list-style: none;
+    text-align: center;
+}
+
+    .mlnb ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+#main .mtopic {
+    width: 598px;
+    height: 98px;
+    border: 1px solid #cccccc;
+    margin: 0 0 3px 0;
+}
+
+/*main_banner*/
+#main_banner .hsearch {
+    width: 228px;
+    height: 98px;
+    border: 1px solid #cccccc;
+    margin: 0 0 3px 0;
+}
+
+#main_banner .ad1 {
+    width: 228px;
+    height: 98px;
+    border: 1px solid #cccccc;
+    margin: 0 0 3px 0;
+}
+
+#main_banner .ad2 {
+    width: 228px;
+    height: 148px;
+    border: 1px solid #cccccc;
+    margin: 0 0 3px 0;
+}
+
+#main_banner .ad3 {
+    width: 228px;
+    height: 148px;
+    border: 1px solid #cccccc;
+    margin: 0 0 3px 0;
+}
+#main_banner .ad4 {
+    width: 228px;
+    height: 198px;
+    border: 1px solid #cccccc;
+}
+/*footer*/
+footer{
+    margin:0 auto;
+    max-width: 1200px;
+    min-width: 1200px;
+    height: 100px;
+    overflow: hidden;
+    border:1px solid #cccccc;
+}
+footer ul{
+    width:750px;
+    height:98px;
+}
+footer ul li{
+    list-style:none;
+    height:98px;
+    float:left;
+    margin:0 5px 0 5px;
+}
+footer img{
+    margin:20px 0 0 0;
+}
+footer #add{
+   float:left;
+}
