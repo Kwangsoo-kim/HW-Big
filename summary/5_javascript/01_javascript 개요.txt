@@ -1,0 +1,17 @@
+// JavaScript 개요
+	
+	1. javaScript 개요
+		- JAVA와는 완전히 다른 프로그래밍 언어
+		- HTML5 에서는 script태그에 type을 적지 않는다.
+		- 웹 브라우저에서 script 태그는 순서대로 작동한다.
+		- 변수선언은 값을 입력하거나 앞에 var를 붙인다.
+	
+	2. 오류확인 방법 
+		- 일반적으로 javascript는 화면에 오류를 나타내 주지 않는다
+		- 오류가 나면 그 전까지만 javascript가 실행된다.
+		- script 태그 사이마다 alert을 넣어 확인할 수 있다.
+		- console.log를 사용하여 확인 할 수 있다.
+
+
+
+// 210121 kks
