@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title></title>
+    <style>
+        /****************** 페이지 초기화 *********************/
+        *{
+            margin:0;
+            padding:0;
+            font-family:'Times New Roman', Times, serif;
+        }
+        body{
+            min-width:980px;
+        }
+        a{
+            text-decoration:none;
+        }
+        li{
+            list-style:none;
+        }
+        /****************** header *********************/
+        #header{
+            height:100px;
+            line-height:100px;
+            background-color:rebeccapurple;
+            color:white;
+            font-weight:bold;
+            font-size:2em;
+            padding:0 0 0 10px;
+        }
+        /****************** gnb *********************/
+        #gnb{
+            overflow:hidden;
+            background-color:#222222;
+            height:80px;
+            line-height:80px;
+        }
+        #gnb ul:first-child{
+            float:left;
+        }
+        #gnb ul:last-child{
+            float:right;
+        }
+        #gnb ul li{
+            float:left;
+            width:140px;
+            border-right : 1px solid gray;
+            text-align:center;
+            box-sizing:border-box;
+        }
+        #gnb ul:last-child li:first-child{
+            border-left: 1px solid gray;
+        }
+        #gnb ul li a{
+            color:white;
+            font-size:1.2em;
+            display:block; /* a태그의 공간 확장*/
+        }
+        /****************** section *********************/
+        #section{
+            overflow:hidden;
+            background-color:#e1e262;
+        }
+        #section #lnb{
+            float:left;
+            width:200px;
+        }
+       
+        #section #lnb ul li a{
+            display:block;
+            padding:15px 0;
+            color:black;
+            font-size:1.2em;
+            text-align:center;
+            border-bottom:1px dashed brown;
+        }
+        #section #content_wrap{
+            float:left;
+            width:100%;
+            margin-right:-200px;
+            background-color:lightgoldenrodyellow;
+        }
+        #section #content_wrap #content{
+            padding:20px 220px 20px 20px;
+        }
+        #section #content_wrap #content div{
+            margin-bottom :30px;
+            overflow:hidden;
+        }
+        #section #content_wrap #content div img{
+            margin:10px;
+            border-radius:20px;
+        }
+        #section #content_wrap #content div:first-child img{
+            float:left;
+            margin-right:15px;
+        }
+        #section #content_wrap #content div p::first-line{
+            font-size:1.5em;
+            color:red;
+        }
+        #section #content_wrap #content div p::first-letter{
+            font-size:2em;
+            font-weight:bold;
+            color:red;
+        }
+        #section #content_wrap #content div:nth-child(2) img{
+            float:right;
+            margin-left:15px;
+        }
+        #section #content_wrap #content div:nth-child(4){
+            border-top:1px dashed gray;
+            padding-top:10px;
+        }
+        #section #content_wrap #content div:nth-child(4) img{
+            float:left;
+        }
+        #section #content_wrap #content div:nth-child(4) img:nth-child(3){
+            margin-right:20px;
+        }
+        /****************** footer *********************/
+        #footer{
+            background-color:#cccccc;
+            height:100px;
+            text-align:center;
+        }
+        #footer p:first-child{
+            padding:25px 0 10px 0;
+            font-weight:bold;
+            font-size:1.3em;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <p>Web Site for Tablet-PC</p>
+    </div>
+    <div id="gnb">
+        <ul>
+            <li><a href="#">Gnb1</a></li>
+            <li><a href="#">Gnb2</a></li>
+            <li><a href="#">Gnb3</a></li>
+            <li><a href="#">Gnb4</a></li>
+            <li><a href="#">Gnb5</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Gnb6</a></li>
+            <li><a href="#">Gnb7</a></li>
+        </ul>
+    </div>
+    <div id="section">
+        <div id="lnb">
+            <ul>
+                <li><a href="#">Btn1</a></li>
+                <li><a href="#">Btn2</a></li>
+                <li><a href="#">Btn3</a></li>
+                <li><a href="#">Btn4</a></li>
+                <li><a href="#">Btn5</a></li>
+                <li><a href="#">Btn6</a></li>
+                <li><a href="#">Btn7</a></li>
+                <li><a href="#">Btn8</a></li>
+                <li><a href="#">Btn9</a></li>
+            </ul>
+        </div>
+        <div id="content_wrap">
+            <div id="content">
+                <div>
+                    <h1>What is Lorem Ipsum?</h1>
+                    <img src="0121_imgTab/img.jpg" alt="삽화" />
+                    <p>
+                        Etiam enim odio, dignissim sed nibh vitae, congue placerat sapien. Ut semper, urna eget venenatis ullamcorper, magna velit rhoncus tellus, at scelerisque turpis lorem at nunc. Praesent sed metus in purus gravida mollis. Quisque tincidunt commodo felis, vitae vestibulum diam lobortis in. Mauris aliquet, lectus convallis elementum volutpat, metus sem placerat urna, sit amet ultricies lorem velit non justo. Integer id ultrices risus, sit amet fringilla eros. Sed risus dui, condimentum ut pellentesque a, faucibus ut purus. Suspendisse posuere nisl volutpat, mattis massa tincidunt, placerat urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed ut congue nisi. Proin at odio faucibus, malesuada turpis a, porta turpis. Curabitur eleifend dictum ante, vitae tempor tortor ultrices sed. Fusce porta lacinia lorem, ac consequat erat egestas id. Etiam ut neque non odio iaculis feugiat. Nulla ac pulvinar ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi iaculis gravida lectus, non dapibus sem condimentum eget. Vestibulum vitae quam ultricies, porta tellus ut, molestie lorem. Fusce rhoncus eu lorem vel commodo. Nullam lacinia ex quis odio placerat pharetra. In fermentum diam ante, at interdum lorem tristique feugiat. Aenean dolor eros, rhoncus at leo a, dapibus pretium dui.Etiam sit amet elementum est, quis molestie quam. Maecenas dapibus varius tortor et fringilla. In luctus eu metus sed hendrerit. Suspendisse libero sapien, elementum non tincidunt at, scelerisque nec nulla. Ut pretium leo nec mauris sagittis egestas. Pellentesque vitae aliquam dui, quis convallis sapien. Aenean nec libero libero. Vestibulum vehicula porttitor elit. Donec dapibus urna vel velit euismod, eget lobortis nulla sodales. Donec dignissim orci ac vehicula volutpat. Curabitur tellus felis, porttitor sed enim nec, vehicula lacinia orci. Nunc quis odio a tellus finibus eleifend. Curabitur auctor non odio nec luctus. Aliquam et enim enim. Aenean vitae erat laoreet, fermentum tellus sit amet, scelerisque purus Proin sodales magna at sagittis sollicitudin. Cras nunc felis, venenatis vel diam sed, imperdiet venenatis nibh. Integer aliquam magna tellus, sed accumsan nisl tincidunt vel. Praesent facilisis gravida eros a aliquam. Fusce elementum elementum metus a cursus. Sed sapien libero, ultricies eget venenatis a, tempor sed libero. Etiam elit leo, posuere sit amet orci tempus, lobortis hendrerit nisi. Morbi et fermentum felis. Vivamus vulputate suscipit eros, quis facilisis orci mattis iaculis. Morbi pulvinar lacus eget nisl eleifend, et interdum mauris luctus. Aliquam porttitor, quam vitae lacinia dignissim, magna felis bibendum nisi, sed porttitor nulla urna vitae ligula. Sed at libero luctus mi porttitor placerat. Cras placerat ut nunc non cursus. Morbi cursus diam sit amet interdum finibus. Quisque ut sollicitudin risusCurabitur ultrices sodales leo, sed finibus neque ornare sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisl magna, maximus eget commodo id, ultricies at odio. Donec aliquam magna ac ipsum dignissim, vitae feugiat risus mattis. Nullam sem lacus, luctus volutpat dolor aliquet, pretium auctor mauris. Integer maximus sem eget urna euismod, dignissim hendrerit urna iaculis. Vestibulum velit elit, efficitur in interdum sit amet, ornare laoreet justo.
+                    </p>
+                </div>
+                <div>
+                    <h1>What is Lorem Ipsum?</h1>
+                    <img src="0121_imgTab/img.jpg" alt="삽화" />
+                    <p>
+                        Etiam enim odio, dignissim sed nibh vitae, congue placerat sapien. Ut semper, urna eget venenatis ullamcorper, magna velit rhoncus tellus, at scelerisque turpis lorem at nunc. Praesent sed metus in purus gravida mollis. Quisque tincidunt commodo felis, vitae vestibulum diam lobortis in. Mauris aliquet, lectus convallis elementum volutpat, metus sem placerat urna, sit amet ultricies lorem velit non justo. Integer id ultrices risus, sit amet fringilla eros. Sed risus dui, condimentum ut pellentesque a, faucibus ut purus. Suspendisse posuere nisl volutpat, mattis massa tincidunt, placerat urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed ut congue nisi. Proin at odio faucibus, malesuada turpis a, porta turpis. Curabitur eleifend dictum ante, vitae tempor tortor ultrices sed. Fusce porta lacinia lorem, ac consequat erat egestas id. Etiam ut neque non odio iaculis feugiat. Nulla ac pulvinar ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi iaculis gravida lectus, non dapibus sem condimentum eget. Vestibulum vitae quam ultricies, porta tellus ut, molestie lorem. Fusce rhoncus eu lorem vel commodo. Nullam lacinia ex quis odio placerat pharetra. In fermentum diam ante, at interdum lorem tristique feugiat. Aenean dolor eros, rhoncus at leo a, dapibus pretium dui.Etiam sit amet elementum est, quis molestie quam. Maecenas dapibus varius tortor et fringilla. In luctus eu metus sed hendrerit. Suspendisse libero sapien, elementum non tincidunt at, scelerisque nec nulla. Ut pretium leo nec mauris sagittis egestas. Pellentesque vitae aliquam dui, quis convallis sapien. Aenean nec libero libero. Vestibulum vehicula porttitor elit. Donec dapibus urna vel velit euismod, eget lobortis nulla sodales. Donec dignissim orci ac vehicula volutpat. Curabitur tellus felis, porttitor sed enim nec, vehicula lacinia orci. Nunc quis odio a tellus finibus eleifend. Curabitur auctor non odio nec luctus. Aliquam et enim enim. Aenean vitae erat laoreet, fermentum tellus sit amet, scelerisque purus Proin sodales magna at sagittis sollicitudin. Cras nunc felis, venenatis vel diam sed, imperdiet venenatis nibh. Integer aliquam magna tellus, sed accumsan nisl tincidunt vel. Praesent facilisis gravida eros a aliquam. Fusce elementum elementum metus a cursus. Sed sapien libero, ultricies eget venenatis a, tempor sed libero. Etiam elit leo, posuere sit amet orci tempus, lobortis hendrerit nisi. Morbi et fermentum felis. Vivamus vulputate suscipit eros, quis facilisis orci mattis iaculis. Morbi pulvinar lacus eget nisl eleifend, et interdum mauris luctus. Aliquam porttitor, quam vitae lacinia dignissim, magna felis bibendum nisi, sed porttitor nulla urna vitae ligula. Sed at libero luctus mi porttitor placerat. Cras placerat ut nunc non cursus. Morbi cursus diam sit amet interdum finibus. Quisque ut sollicitudin risusCurabitur ultrices sodales leo, sed finibus neque ornare sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisl magna, maximus eget commodo id, ultricies at odio. Donec aliquam magna ac ipsum dignissim, vitae feugiat risus mattis. Nullam sem lacus, luctus volutpat dolor aliquet, pretium auctor mauris. Integer maximus sem eget urna euismod, dignissim hendrerit urna iaculis. Vestibulum velit elit, efficitur in interdum sit amet, ornare laoreet justo.
+                    </p>
+                </div>
+                <div>
+                    <h1>What is Lorem Ipsum?</h1>
+                    <img src="0121_imgTab/img.jpg" alt="삽화" />
+                    <p>
+                        Etiam enim odio, dignissim sed nibh vitae, congue placerat sapien. Ut semper, urna eget venenatis ullamcorper, magna velit rhoncus tellus, at scelerisque turpis lorem at nunc. Praesent sed metus in purus gravida mollis. Quisque tincidunt commodo felis, vitae vestibulum diam lobortis in. Mauris aliquet, lectus convallis elementum volutpat, metus sem placerat urna, sit amet ultricies lorem velit non justo. Integer id ultrices risus, sit amet fringilla eros. Sed risus dui, condimentum ut pellentesque a, faucibus ut purus. Suspendisse posuere nisl volutpat, mattis massa tincidunt, placerat urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed ut congue nisi. Proin at odio faucibus, malesuada turpis a, porta turpis. Curabitur eleifend dictum ante, vitae tempor tortor ultrices sed. Fusce porta lacinia lorem, ac consequat erat egestas id. Etiam ut neque non odio iaculis feugiat. Nulla ac pulvinar ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi iaculis gravida lectus, non dapibus sem condimentum eget. Vestibulum vitae quam ultricies, porta tellus ut, molestie lorem. Fusce rhoncus eu lorem vel commodo. Nullam lacinia ex quis odio placerat pharetra. In fermentum diam ante, at interdum lorem tristique feugiat. Aenean dolor eros, rhoncus at leo a, dapibus pretium dui.Etiam sit amet elementum est, quis molestie quam. Maecenas dapibus varius tortor et fringilla. In luctus eu metus sed hendrerit. Suspendisse libero sapien, elementum non tincidunt at, scelerisque nec nulla. Ut pretium leo nec mauris sagittis egestas. Pellentesque vitae aliquam dui, quis convallis sapien. Aenean nec libero libero. Vestibulum vehicula porttitor elit. Donec dapibus urna vel velit euismod, eget lobortis nulla sodales. Donec dignissim orci ac vehicula volutpat. Curabitur tellus felis, porttitor sed enim nec, vehicula lacinia orci. Nunc quis odio a tellus finibus eleifend. Curabitur auctor non odio nec luctus. Aliquam et enim enim. Aenean vitae erat laoreet, fermentum tellus sit amet, scelerisque purus Proin sodales magna at sagittis sollicitudin. Cras nunc felis, venenatis vel diam sed, imperdiet venenatis nibh. Integer aliquam magna tellus, sed accumsan nisl tincidunt vel. Praesent facilisis gravida eros a aliquam. Fusce elementum elementum metus a cursus. Sed sapien libero, ultricies eget venenatis a, tempor sed libero. Etiam elit leo, posuere sit amet orci tempus, lobortis hendrerit nisi. Morbi et fermentum felis. Vivamus vulputate suscipit eros, quis facilisis orci mattis iaculis. Morbi pulvinar lacus eget nisl eleifend, et interdum mauris luctus. Aliquam porttitor, quam vitae lacinia dignissim, magna felis bibendum nisi, sed porttitor nulla urna vitae ligula. Sed at libero luctus mi porttitor placerat. Cras placerat ut nunc non cursus. Morbi cursus diam sit amet interdum finibus. Quisque ut sollicitudin risusCurabitur ultrices sodales leo, sed finibus neque ornare sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisl magna, maximus eget commodo id, ultricies at odio. Donec aliquam magna ac ipsum dignissim, vitae feugiat risus mattis. Nullam sem lacus, luctus volutpat dolor aliquet, pretium auctor mauris. Integer maximus sem eget urna euismod, dignissim hendrerit urna iaculis. Vestibulum velit elit, efficitur in interdum sit amet, ornare laoreet justo.
+                    </p>
+                </div>
+                <div>
+                    <img src="0121_imgTab/100.jpg" alt="부를 부르는 이미지" />
+                    <img src="0121_imgTab/150.jpg" alt="부를 부르는 이미지" />
+                    <img src="http://placehold.it/150x150" alt="더미" />
+                    <p>
+                        Etiam enim odio, dignissim sed nibh vitae, congue placerat sapien. Ut semper, urna eget venenatis ullamcorper, magna velit rhoncus tellus, at scelerisque turpis lorem at nunc. Praesent sed metus in purus gravida mollis. Quisque tincidunt commodo felis, vitae vestibulum diam lobortis in. Mauris aliquet, lectus convallis elementum volutpat, metus sem placerat urna, sit amet ultricies lorem velit non justo. Integer id ultrices risus, sit amet fringilla eros. Sed risus dui, condimentum ut pellentesque a, faucibus ut purus. Suspendisse posuere nisl volutpat, mattis massa tincidunt, placerat urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed ut congue nisi. Proin at odio faucibus, malesuada turpis a, porta turpis. Curabitur eleifend dictum ante, vitae tempor tortor ultrices sed. Fusce porta lacinia lorem, ac consequat erat egestas id. Etiam ut neque non odio iaculis feugiat. Nulla ac pulvinar ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi iaculis gravida lectus, non dapibus sem condimentum eget. Vestibulum vitae quam ultricies, porta tellus ut, molestie lorem. Fusce rhoncus eu lorem vel commodo. Nullam lacinia ex quis odio placerat pharetra. In fermentum diam ante, at interdum lorem tristique feugiat. Aenean dolor eros, rhoncus at leo a, dapibus pretium dui.Etiam sit amet elementum est, quis molestie quam. Maecenas dapibus varius tortor et fringilla. In luctus eu metus sed hendrerit. Suspendisse libero sapien, elementum non tincidunt at, scelerisque nec nulla. Ut pretium leo nec mauris sagittis egestas. Pellentesque vitae aliquam dui, quis convallis sapien. Aenean nec libero libero. Vestibulum vehicula porttitor elit. Donec dapibus urna vel velit euismod, eget lobortis nulla sodales. Donec dignissim orci ac vehicula volutpat. Curabitur tellus felis, porttitor sed enim nec, vehicula lacinia orci. Nunc quis odio a tellus finibus eleifend. Curabitur auctor non odio nec luctus. Aliquam et enim enim. Aenean vitae erat laoreet, fermentum tellus sit amet, scelerisque purus Proin sodales magna at sagittis sollicitudin. Cras nunc felis, venenatis vel diam sed, imperdiet venenatis nibh. Integer aliquam magna tellus, sed accumsan nisl tincidunt vel. Praesent facilisis gravida eros a aliquam. Fusce elementum elementum metus a cursus. Sed sapien libero, ultricies eget venenatis a, tempor sed libero. Etiam elit leo, posuere sit amet orci tempus, lobortis hendrerit nisi. Morbi et fermentum felis. Vivamus vulputate suscipit eros, quis facilisis orci mattis iaculis. Morbi pulvinar lacus eget nisl eleifend, et interdum mauris luctus. Aliquam porttitor, quam vitae lacinia dignissim, magna felis bibendum nisi, sed porttitor nulla urna vitae ligula. Sed at libero luctus mi porttitor placerat. Cras placerat ut nunc non cursus. Morbi cursus diam sit amet interdum finibus. Quisque ut sollicitudin risusCurabitur ultrices sodales leo, sed finibus neque ornare sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisl magna, maximus eget commodo id, ultricies at odio. Donec aliquam magna ac ipsum dignissim, vitae feugiat risus mattis. Nullam sem lacus, luctus volutpat dolor aliquet, pretium auctor mauris. Integer maximus sem eget urna euismod, dignissim hendrerit urna iaculis. Vestibulum velit elit, efficitur in interdum sit amet, ornare laoreet justo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>홍길동 주식회사</p>
+        <p>copyright ⓒ tjoeun Co., All rights reserved.</p>
+    </div>
+</body>
+</html>
