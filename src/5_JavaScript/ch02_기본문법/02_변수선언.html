@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var varString;
+        document.write("1.varString의 타입 :" + typeof (varString) + " - 값 : " + varString + "<br/>");
+        varString = "홍길동";
+        document.write("2.varString의 타입 :" + typeof (varString) + " - 값 : " + varString + "<br/>");
+        varString = 10.5;
+        document.write("3.varString의 타입 :" + typeof (varString) + " - 값 : " + varString + "<br/>");
+        varString = true;
+        document.write("4.varString의 타입 :" + typeof (varString) + " - 값 : " + varString + "<br/>");
+        varString = function () {
+            alert("함수속");
+        };
+        document.write("5.varString의 타입 :" + typeof (varString) + " - 값 : " + varString + "<br/>");
+        // varString(); 함수형
+        varString = { name: "홍길동", age: 28, addr: "마포구" };
+        document.write("6.varString의 타입 :" + typeof (varString) + " - 값 : " + varString + "<br/>");
+        varString = [10, "홍", function () { }, true, { name: "홍", age: 20 }, [1,2,3]];
+        document.write("7.varString의 타입 :" + typeof (varString) + " - 값 : " + varString + "<br/>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var fcnt = 0;
+        var tcnt = 0;
+        var sum = 0;
+        do {
+            value = confirm("누적할래?");
+            if (value == true) {
+                numstr = prompt("누적할 점수?", '');
+                num = Number(numstr);
+                if (isNaN(numstr) || numstr < 0 || numstr > 100 ) {
+                    fcnt++
+                } else if (num == null) {
+                    break;
+                } else {
+                    tcnt++
+                    sum += num;
+                }
+            } else {
+                break;
+            }
+
+        } while (true);
+        document.write((fcnt + tcnt) + '번 입력<br>');
+        document.write('누적점수 : ' + sum +'<br>');
+        document.write('점수를 제대로 입력한 횟수 : ' + tcnt +'<br>');
+        document.write('점수를 잘못 입력한 횟수 : ' + fcnt +'<br>');
+
+    </script>
+</head>
+<body>
+</body>
+</html>

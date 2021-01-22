@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        do {
+            var dan = Number(prompt("단수", "1~9"));
+            if (isNaN(dan) || dan <= 0 || 9 < dan) {
+                alert('제대로 된 수를 적어라');
+            } else {
+                break;
+            }
+
+        } while (true);
+        document.write('<h2>' + dan + '단 구구단</h2>');
+        for (i = 1; i < 10; i++) {
+            a = i * dan;
+            document.write('<ul>');
+            document.write('<li>' + a + '</li>');
+            document.write('</ul>');
+        }
+    </script>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        h2{width:120px;
+            margin:0 auto;}
+        li{
+            width:70px;
+            padding:10px;
+            margin:10px auto;
+            list-style:none;
+            border:1px solid red;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>

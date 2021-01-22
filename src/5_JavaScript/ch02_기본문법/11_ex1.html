@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function chk() {
+            if (frm.name.value.length < 2) {
+                alert("이름은  두글자 이상");
+                frm.name.focus();
+                return false;
+            }
+            var ageStr = frm.age.value;
+            var age = Number(ageStr);
+            if (ageStr == '' || isNaN(age) || age < 0 || age > 120) {
+                alert("유효한 나이를 입력해라");
+                from.age.value = "";
+                frm.age.focus();
+                return false;
+            }
+            // false로 인식된는 값들 : 0 ,"",null,undefined
+            if (!frm.add.value) {
+                alert("주소를 입력해라");
+                frm.add.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+            border: 1px solid darkblue;
+            text-align: center;
+        }
+        #taw{
+            width:250px;
+            height:100px;
+            margin:0 auto;
+            padding:35px 0 0 0;
+        }
+        table{
+            width:240px;
+            margin:0 auto;
+        }
+        #name,#age,#add{
+            height:20px;
+            border:1px solid darkblue;
+        }
+    </style>
+</head>
+<body>
+    <form name="frm" onsubmit="return chk()">
+        <div id="wrap">
+            <div id="taw">
+                <table>
+                    <tr>
+                        <td>이름</td>
+                        <td><input type="text" name="name" placeholder="이름은 2글자 이상" /></td>
+                    </tr>
+                    <tr>
+                        <td>나이</td>
+                        <td><input type="text" name="age" placeholder="나이는 0~120까지" /></td>
+                    </tr>
+                    <tr>
+                        <td>주소</td>
+                        <td><input type="text" name="add" placeholder="주소는 입력만" /></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="input">
+                <input type="submit" value="입력" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>

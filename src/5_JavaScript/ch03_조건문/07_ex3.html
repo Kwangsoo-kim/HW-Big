@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function chk() {
+            if (frm.num1.value != null && frm.num2.value != null) {
+                if (!frm.num1.value) {
+                    frm.num1.value = "";
+                    return false;
+
+                } else if (!frm.num2.value) {
+                    frm.num2.value = "";
+                    return false;
+                }
+            }
+            var a = Number(frm.num1.value);
+            var b = Number(frm.num2.value);
+            var cha = (a > b) ? (a - b) : (b - a);
+            if (a == b) {
+                var result = "<p>두 수가 같다</p>";
+            } else if (a > b) {
+                var result = "<p>첫번째 수가 " + cha + "만큼 더 크다</p>";
+            } else {
+                var result = "<p>두번재 수가" + cha + "만큼 더 크다</p>";
+            }
+            document.body.innerHTML += result;
+            newr = result.substring(0, result.indexOf('</p>'));
+            newr = newr.substring(3);
+            frm.num1.value = a;
+            frm.num2.value = b;
+            alert(newr);
+            return false;
+
+        }
+    </script>
+</head>
+<body>
+    <form name="frm" onsubmit="return chk()">
+        <table>
+            <tr>
+                <td>수1</td>
+                <td><input type="text" name="num1" /></td>
+            </tr>
+            <tr>
+                <td>수2</td>
+                <td><input type="text" name="num2" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="결과" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

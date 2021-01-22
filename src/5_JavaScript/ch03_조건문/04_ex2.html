@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var kor;
+        var mat;
+        while (isNaN(kor) || kor <= 0 || kor > 100){
+            kor = Number(prompt("국어점수", "점수"));
+        }
+        while (isNaN(mat) || mat <= 0 || mat > 100){
+            mat = Number(prompt("수학점수", "점수"));
+        }
+
+        var avg = (kor + mat) / 2;
+        if (avg < 101 && avg >= 90) {
+            document.write("수");
+        } else if (avg < 90 && avg >= 80) {
+            document.write("우");
+        } else if (avg < 80 && avg >= 70) {
+            document.write("미");
+        } else if (avg < 70 && avg >= 60) {
+            document.write("양");
+        } else if (avg < 60 && avg >= 50) {
+            document.write("가");
+        } else {
+            document.write("분발");
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
