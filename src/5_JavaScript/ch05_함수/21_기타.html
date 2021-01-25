@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var willEval = 'var number = 10;';
+        willEval += 'alert(number);';
+        eval(willEval);
+        var H = 10 / 0; // infinity
+        alert(isFinite(H)); // isFinite() : 유한값인지 여부
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

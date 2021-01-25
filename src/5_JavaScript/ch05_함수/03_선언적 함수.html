@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        fun();  //선언적 함수는 선언만 되어있다면 위치상관없이 실행가능 (같은 페이지내에선 하단에 있어도 되나 다른 페이지에선 상단에 있어야함)
+        function fun() {    // 선언적 함수.
+            alert('함수 A');
+        };
+        fun();  // 선언적 함수 호출.
+        alert(fun);
+        alert(alert);   // 내부코드는 가려짐.
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

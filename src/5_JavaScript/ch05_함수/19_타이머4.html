@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>    //자기호출함수, 배열 이용해서 0,1,2 경고창 뜨도록.
+
+        for (i = 0; i < 3; i++) {
+            (function (j) {
+                setTimeout(function () {
+                    alert(j);
+                }, 0);
+            })(i);
+        };
+        //forEach
+        [0, 1, 2].forEach(function (data) {
+            setTimeout(function () {
+                alert(data);
+            },0)
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

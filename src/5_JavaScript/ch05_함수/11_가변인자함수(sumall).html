@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var sum = sumAll(); // 매개변수 없으면 -999
+        document.write('sumAll() 의 값' + sum+'<br>');
+        var sum = sumAll(1); // 매개변수가 1개 이상이면 누적값
+        document.write('sumAll(1) 의 값' + sum + '<br>');
+        var sum = sumAll(1, 2, 3, 4, 5); // 15
+        document.write('sumAll(1,2,3,4,5) 의 값' + sum + '<br>');
+        
+        function sumAll() {
+            var result = 0;
+            if (arguments.length == 0) {
+                result = -999;
+            }else {
+                for (var i in arguments) {
+                    result += arguments[i]; 
+                }
+            }
+            return result;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

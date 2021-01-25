@@ -1,0 +1,9 @@
+// 반복문
+	
+	1. while 반복문, do while 반복문, for 문
+	2. for in 반복문
+		- for(var i in array) { }
+	3. forEach 반복문 
+		- forEach(callback, thisArg){}
+
+// 210125 kks

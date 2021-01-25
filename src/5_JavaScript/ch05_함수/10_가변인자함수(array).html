@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>    // 인자가 0개 : 빈배열 / 인자가 1 개 : 방의 갯수가 인자인배열 / 인자가 2개 이상 : 인자 자체가 배열 
+        var arr1 = array();
+        document.write(arr1 + '방갯수' + arr1.length + '<br>');
+        var arr2 = array(3);
+        document.write(arr2 + '방갯수' + arr2.length + '<br>');
+        var arr3 = array(273, 3, 'hello');
+        document.write(arr3 + '방갯수' + arr3.length + '<br>');
+
+        function array() {  //argument : 함수내 매개변수 배열
+            var result = [];
+            if (arguments.length == 1) {// 인자 1개일때
+                for (var cnt = 1; cnt = arguments[0]; cnt++){
+                    result.push('');
+                }
+            } else if (arguments.length >= 2) {// 인자 2개 이상 일때
+                //for (var idx = 0; idx < arguments.length; idx++) {
+                //    result.push(arguments[idx]);
+                //}
+                for (var idx in arguments) {
+                    result.push(arguments[idx]);
+                }
+                //arguments.forEach(function (data) {
+                //    result.push(data);
+                //});
+            }
+            return result;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
