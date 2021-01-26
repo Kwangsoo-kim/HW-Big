@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var priNumber = 273.25;
+        var objNumber = new Number(273.25);
+        document.write('priNumber 의 타입은 : ' + typeof (priNumber) + '<br>');
+        document.write('objNumber 의 타입은 : ' + typeof (objNumber) + '<br>');
+        document.write('priNumber.toFixed() : ' + priNumber.toFixed(1) + '<br>');
+        document.write('objNumber.toFixed() : ' + objNumber.toFixed(1) + '<br>');
+        //constructor : 생성자 함수 출력 
+        document.write('priNumber를 생성시 생성자 함수 : ' + priNumber.constructor + '<br>');
+        document.write('objNumber를 생성시 생성자 함수 : ' + objNumber.constructor + '<br>');
+        if (priNumber.constructor == objNumber.constructor) {
+            document.write('priNumber 와 objNumber는 생성자가 같다.');
+        } else {
+            document.write('priNumber 와 objNumber는 생성자가 다르다.');
+        }
+        // 내장객체 Number에 메소드 추가
+        Number.prototype.method1 = function () {
+            alert('Number타입은 다 써 ');
+        };
+        priNumber.method1();
+        objNumber.method1();
+        // objNumber에 메소드 추가
+        objNumber.method2 = function () {
+            alert('objNumber만 써 ');
+        };
+        objNumber.method2();
+        // priNumber에 메소드 추가
+        priNumber.method3 = function () {
+            alert('되나 보자');
+        };
+        priNumber.method3();
+        // priNumber와 objNumber는 사용법이 같다. 다만 priNumber(기초데이터타입)에 메소드 추가 불가!
+        // 기초데이터 타입 = number,String,Boolean
+    </script>
+</head>
+<body>
+
+</body>
+</html>

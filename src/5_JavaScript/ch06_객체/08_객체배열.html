@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var students = [{ name: '김길동', kor: 30, mat: 20, eng: 10, sci: 50 }];
+        students.push({ name: '홍길동', kor: 90, mat: 70, eng: 90, sci: 80 })
+        students.push({ name: '신길동', kor: 70, mat: 90, eng: 60, sci: 85 })
+        students.push({ name: '이길동', kor: 35, mat: 60, eng: 95, sci: 95 })
+        students.push({ name: '박길동', kor: 65, mat: 80, eng: 85, sci: 45 })
+        students.push({ name: '심길동', kor: 55, mat: 30, eng: 75, sci: 55 })
+        for (var idx in students) {
+            students[idx].getSum = function () {
+                return (this.kor + this.mat + this.eng + this.sci);
+            };
+            students[idx].getAvg = function () {
+                return this.getSum() / 4;   // 소수점 유지
+            };
+            students[idx].toString = function () {
+                var output = '';
+                for (var key in this) {
+                    if (key != 'toString' && key != 'getSum' && key != 'getAvg') {
+                        output += key + ' : ' + this[key] + '\n';
+                    } else if (key == 'getSum' || key == 'getAvg') {
+                        output += key.substring(3) + ' : ' + this[key]() + '\n';
+                    }
+                }
+                return output;
+            };
+        }
+        // 1. 일반 for문
+        document.write('<h2>1. for  문 이용 </h2>');
+        var output = '';
+        for (var i = 0; i < students.length; i++) {
+            output += i + '번째\n';
+            output += students[i];
+        }
+        alert(output);
+        document.write(output.replaceAll('\n', '<br>'));
+        // 2. for-in 문
+        document.write('<h2>2. for - in 문 이용 </h2>');
+        for (idx in students) {
+            document.write(students[idx]+'<br>');
+        }
+        // 3. forEach()
+        document.write('<h2>3. forEach() 문 이용 </h2>');
+        students.forEach(function (data, idx) {
+            document.write(idx + ' 번째 :<br>');
+            document.write(data + '<br>');
+
+        });
+
+
+        //replaceAll : output에서 oldStr을 newStr로 모두 교체
+        function replaceAll(output, oldStr, newStr) {
+            // join, split 
+            return output.split(oldStr).join(newStr);
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

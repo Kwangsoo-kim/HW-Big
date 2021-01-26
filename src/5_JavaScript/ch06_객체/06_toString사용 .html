@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var student = {
+            name: 'Hong',
+            kor: 90,
+            mat: 100,
+            eng: 98,
+            sci: 91,
+            toString: function () {
+                var output = '';
+                for (var key in this) {
+                    if (key != 'toString') {
+                        (output += key + ' : ' + this[key] + '<br>');
+                    }
+                }
+                return output;
+            },
+        }
+        document.write(student);    // toString 생략가능.
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

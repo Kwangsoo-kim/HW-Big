@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function makeStudent(name,kor,mat,eng,sci) {
+            return resultObj = {
+                name : name,
+                kor: kor,
+                mat: mat,
+                eng: eng,
+                sci: sci,
+                getSum: function () {
+                    return this.kor + this.mat + this.eng + this.sci;
+                },
+                getAvg: function () {
+                    return (this.getSum() / 4);
+                },
+                toString: function () {
+                    var output = '';
+                    for (var key in this) {
+                        if (key != 'toString' && key != 'getSum' && key != 'getAvg') {
+                            output += key + ' : ' + this[key] + '\t';
+                        } else if (key == 'getSum' || key == 'getAvg') {
+                            output += key.substring(3) + ' : ' + this[key]() + '\t';
+                        }
+                    }
+                    return output;
+                },
+            };//resultObj
+            return resultObj;
+        }
+        var students = [];
+        students.push(makeStudent('홍', 100, 20, 80, 90));
+        students.push(makeStudent('이', 60, 80, 72, 67));
+        students.push(makeStudent('박', 74, 72, 45, 36));
+        students.push(makeStudent('김', 50, 91, 74, 99));
+        students.push(makeStudent('삼', 41, 76, 36, 56));
+        students.push(makeStudent('사', 91, 97, 40, 32));
+        students.forEach(function (data, idx) {
+            document.write(idx + '번 째' + '<br>'+data+'<hr>');
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

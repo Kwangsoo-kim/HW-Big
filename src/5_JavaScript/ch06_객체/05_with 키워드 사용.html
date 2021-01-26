@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var student = {
+            name: '홍길',
+            kor: 92,
+            mat: 93,
+            eng: 100,
+            sci: 98,
+            output : '객체안에 output', // with 사용시 객체안의 변수와 달리 선언된 변수가 겹칠때, window.을 붙여서 window 객체 안의 변수로 변경 시켜준다.
+        }
+        var output = '';
+        output += '이름 : ' + student.name + '<br>';
+        output += '국어점수 : ' + student.kor + '<br>';
+        output += '수학점수 : ' + student.mat + '<br>';
+        output += '영어점수 : ' + student.eng + '<br>';
+        output += '과학점수 : ' + student.sci + '<br>';
+
+        document.write(output);
+        document.write('name in student : ' + ('name' in student) + '<br>');
+
+        var output = '';
+        with (student) {
+            window.output += '이름 : ' + name + '<br>';
+            window.output += '국어점수 : ' + kor + '<br>';
+            window.output += '수학점수 : ' + mat + '<br>';
+            window.output += '영어점수 : ' + eng + '<br>';
+            window.output += '과학점수 : ' + sci + '<br>';
+        }
+
+        document.write(output);
+        document.write('name in student : ' + ('name' in student) + '<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>
