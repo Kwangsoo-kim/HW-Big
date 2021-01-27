@@ -1,0 +1,19 @@
+// 문서객체
+
+	1. 문서객체 : 태그를 Java Script에서 이용할 수 있는 객체로 만든 것이 문서 객체이다.
+		문서객체의 각 요소를 노드라고 부른다.  HTML 페이지에 적혀 있는 태그를
+		읽으며 생성하는 것을 정적으로 문서 객체를 생성한다고 하고, HRML 원 페이지에는
+		없던 문서 객체를 생성하는 것을 동적으로 문서 객체를 생성한다고 한다.
+
+	2. 문서객체 만들기
+		- 1. Document 객체의 노드 생성 : createElement(tagName),createTextNode(text)
+		- 2. 문서객체연결 : appendChid(node)
+		** 텍스트 노드를 갖지 않는 문서 객체 만들기 : setAttribute(' ',' ');
+		** document.body.innerHTML = '~'; 
+
+	3.문서객체 가져오기
+		- id로 가져오기 : getElementbyId(' ');
+		- class로 가져오기 : getElementByClassName(' ');
+		     ** getElementsByclassName의 return은 배열임으로 뒤에[' ']로 구분
+ 
+// 210127 kks

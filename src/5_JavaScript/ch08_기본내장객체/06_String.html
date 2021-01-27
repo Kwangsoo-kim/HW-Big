@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var str = 'abcd@abcd@abc';
+        // 위와 같다. var str = new String('abcd@abcd@abc');
+        document.write('글씨길이 : ' + str.length + '<br>');
+        document.write('글씨더하기 : ' + str.concat('123') + '<br>');
+        //substirng(a,b) : a번째부터 b번째 앞까지 
+        document.write('글씨 추출 : ' + str.substring(3, 5) + '<br>');
+        //substr(a,b) : a번째부터 b글자 추출
+        document.write('글씨 추출 : ' + str.substr(3, 5) + '<br>');
+        document.write('앞부터 일치하는 위치 index : ' + str.indexOf('@') + '<br>');
+        document.write('뒤부터 일치하는 위치 index : ' + str.lastIndexOf('@') + '<br>');
+        document.write('@를 " "로 : ' + str.replaceAll('@', ' ') + '<br>'); 
+        String.prototype.replaceA = function (oldstr, newstr) {
+            result = this.split(oldstr).join(newstr);
+            return result;
+        };
+        document.write(str.replaceA('@', 'XX'));
+        document.write('"yi    "를 space없애기 : ' + '     yi    '.trim() + '<br>');
+        document.write('대문자로 변환 : ' + str.toUpperCase() + '<br>');
+        document.write('소문자로 변환 : ' + str.toLowerCase() + '<br>');
+       
+    </script>
+</head>
+<body>
+
+</body>
+</html>

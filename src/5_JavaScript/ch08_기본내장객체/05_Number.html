@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var num = 273.5510332;  // 지수형 : 2.735210332*10의2승 = 2.735510332E+2
+        document.write(num + '<br>');
+        document.write('지수형 표현 : ' + num.toExponential(5) + '<br>');
+        document.write('소수점 1자리 : ' + num.toFixed(1) + '<br>'); // 자동반올림
+        document.write('소수점 1자리 : ' + (Math.round(num * 10) / 10)+'<br>');
+        document.write('숫자자리수 : ' + num.toPrecision(5));    // 5자리만 나옴 
+    </script>
+</head>
+<body>
+
+</body>
+</html>

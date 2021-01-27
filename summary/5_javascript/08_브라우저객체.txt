@@ -1,0 +1,13 @@
+// 브라우저객체
+
+	1. window 객체 : 브러우저 기반 Java Script의 최상위 객체다.
+		Var 키워드로 선언한 일반 변수도 모두 window 객체의 속성이 된다. 
+		- 새로운 window 객체의 윈도우 생성 메소드
+			- window.open('','','width=,height=,,,,,,,,,,,,,'); 
+	2. screen 객체 : 웹 브라우저의 화면이 아니라 운영체제 화면의 속성을 가지는 객체
+		- screen.width,screen.height 로 사용한다.
+
+	3. location 객체 : 브라우저의 주소 표시줄과 관련된 객체
+		- 일반적으로 location.href = 'url'; 로 사용
+ 
+// 210127 kks
