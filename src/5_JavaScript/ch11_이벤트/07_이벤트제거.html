@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var cnt = 0;
+        window.onload = function () {
+            document.querySelector('h1').onclick = function () {
+                cnt++;
+                this.innerHTML += '❤';
+                //클릭 이벤트는 한번만 가능
+                if (cnt >= 5) {
+                    this.onclick = null;
+                };
+            };
+        };
+    </script>
+</head>
+<body>
+    <h1>좋아요</h1>
+</body>
+</html>

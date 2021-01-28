@@ -15,5 +15,6 @@
 		- id로 가져오기 : getElementbyId(' ');
 		- class로 가져오기 : getElementByClassName(' ');
 		     ** getElementsByclassName의 return은 배열임으로 뒤에[' ']로 구분
- 
+ 		- tag이름이나 name으로 가져오기 : getElementsByName(' '); , getElementsByTagName(' ');
+		- 선택자로 가져오기 : document.querySelector(' '); , document.querySelectorAll(' ');
 // 210127 kks

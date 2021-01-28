@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function confirmOpen() {
+            var confirm = open('confirm.html', '', 'width :200,height:100,left:100');
+            if (!confirm) {
+                alert('팝업제거');
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <p>
+            <p>아이디
+            <input type="text" name="id" id="id" />
+            <input type="button" name="idchkk" value="아이디체크"  onclick="confirmOpen()"></p>
+        </p>
+    </form>
+</body>
+</html>

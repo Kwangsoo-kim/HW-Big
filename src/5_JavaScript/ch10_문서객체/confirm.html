@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function() {
+            var id = opener.document.getElementById('id').value;
+            var idchk = document.getElementById('idchk');
+            idchk.value = id;
+        };
+        function confirmid() {
+            var idchk = document.getElementById('idchk').value;
+            opener.document.getElementById('id').value = idchk;
+            close();
+        }
+    </script>
+</head>
+<body><div>
+    <p>
+        ID
+        <input type="text" id="idchk" />
+        <button>체크</button>
+    </p>
+    <p>
+        <button onclick="confirmid()">아이디 사용</button>
+    </p>
+    </div>
+</body>
+</html>

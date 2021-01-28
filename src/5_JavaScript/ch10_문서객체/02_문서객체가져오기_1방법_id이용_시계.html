@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var id;
+        var header1;
+        var header2;
+        window.onload = function () {
+            header1 = document.getElementById('header-1');
+            header1.innerHTML = '시간';
+            header2 = document.getElementById('header-2');
+            header2.innerHTML = new Date().toLocaleString();
+            id = setInterval(function () {
+                header2.innerHTML = new Date().toLocaleString();
+            }, 1000)
+        };
+        function change(n) {
+            if (n == 1) {
+                header1.innerHTML = '바꿔';
+            } else if (n == 2) {
+                header2.innerHTML = '바꿔';
+                clearInterval(id);  //타이머 중지 
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="header-1">HEADER-1</h1>
+    <h1 id="header-2">HEADER-2</h1>
+    <button onclick="change(1)">바꿔-1</button>
+    <button onclick="change(2)">바꿔-2</button>
+</body>
+</html>

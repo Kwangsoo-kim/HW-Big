@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            var btnA = document.getElementById('btnA');
+            var btnB = document.getElementById('btnB');
+            var countA = document.getElementById('countA');
+            var countB = document.getElementById('countB');
+            var cnta = 0;
+            // btnA를 클릭할 경우 강제로 btnB의 클릭이벤트를 발생
+            btnA.onclick = function () {
+                var cnt=++cnta;
+                countA.innerHTML = cnt;
+                btnB.onclick(); //이벤트 강제실행
+            };
+            btnB.onclick = function () {
+                countB.innerHTML = Number(countB.innerHTML) + 1;
+            }
+        };
+
+
+    </script>
+</head>
+<body>
+    <button id="btnA">Button A</button>
+    <button id="btnB">Button B</button>
+    <h1>Button A - <span id="countA">0</span></h1>
+    <h1>Button B - <span id="countB">0</span></h1>
+</body>
+</html>

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table {
+            width: 500px;
+            margin: 50px auto;
+            background-color: darkgreen;
+        }
+
+        td {
+            background-color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+    </style>
+    <script>
+        window.onkeyup = function () {
+            var td = document.querySelectorAll('td');
+            if (event.keyCode >= 48 && event.keyCode <= 57) {
+                for (var idx = 0; idx < 9; idx++) {
+                    if ((event.keyCode - 48) == idx) {
+                        td[idx].style.backgroundColor = 'red';
+                    } else if ((event.keyCode - 48) != idx) {
+                        td[idx].style.backgroundColor = 'white';
+                    }
+                }
+            } else if (event.keyCode >= 96 && event.keyCode <= 105) {
+                for (var idx = 0; idx < 9; idx++) {
+                    if ((event.keyCode - 96) == idx) {
+                        td[idx].style.backgroundColor = 'yellow';
+                    } else if ((event.keyCode - 96) != idx) {
+                        td[idx].style.backgroundColor = 'white';
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+    </table>
+</body>
+</html>
