@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        td {
+            width: 200px;
+            height: 200px;
+            background-color: #aaffaa;
+            text-align: center;
+            color: #aaffaa;
+        }
+
+        .tdclick {
+            background-color: red;
+            color: red;
+        }
+
+        .dap {
+            background-image: url('img/dduk.jpg');
+        }
+    </style>
+    <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function () {
+            var didx = parseInt(Math.random() * 9);
+            $('td').click(function () {
+                $('td').removeClass('tdclick');
+                var idx = Number($(this).text().trim());
+                if (idx == didx) {
+                    $('p').html('맞추셨어요');
+                    $('td:eq(' + didx + ')').addClass('dap');
+                    $('td').off()
+                } else {
+
+                    $(this).addClass('tdclick');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>연습문제1. 떡이있는 곳을 맞춰봐</h1>
+        <table>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+        </table>
+        <p></p>
+    </div>
+</body>
+</html>

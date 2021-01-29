@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table td{
+            width:100px;
+            height:100px;
+            background-color:#aaffaa;
+            text-align:center;
+        }
+    </style>
+    <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- attr 속성값을 가져오고 셋팅하는 명령어-->
+    <script>
+        $(function () {
+            $('td').click(function () {
+                var who = $(this).attr('class');
+                $('.result').html('당신은 '+ who +' 선택')
+            });
+        });
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="kim"></td>
+            <td class="lee"></td>
+        </tr>
+        <tr>
+            <td class="park"></td>
+            <td class="choi"></td>
+        </tr>
+    </table>
+    <p class="result"></p>
+</body>
+</html>

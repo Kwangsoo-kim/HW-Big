@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var opArray = ['+', '-', '*', '/'];
+            $('#left').val(parseInt(Math.random() * 10));
+            $('#right').val(parseInt(Math.random() * 10));
+            var opidx = parseInt(Math.random() * 4);
+            $('#operation').html('<b>' + opArray[opidx] + '</b>');
+            $('#cal').click(function () {
+                var n1 = Number($('#left').val());
+                var n2 = Number($('#right').val());
+            });
+
+        });
+    </script>
+    <style>
+        p, h1 {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px 40px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        1단계 :
+        <input type="text" id="left" name="num1" readonly="readonly" />
+        <span id="operation"></span>
+        <input type="text" id="right" name="num2" readonly="readonly" />=
+        <input type="text" placeholder="답" id="dap" name="dap" />
+    </p>
+    <p>
+        <button id="reset">다시 해봐</button>
+        <button id="cal">채점 해봐</button>
+    </p>
+    <hr />
+    <h1 class="result"></h1>
+</body>
+</html>
