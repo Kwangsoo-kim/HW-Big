@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        td{padding:10px; border-top:1px solid black;}
+        tr:last-child td {
+            border-bottom:1px solid black;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                // url : json파일 경로
+                // dataType : 'json'
+                // success : 요청 성공시 수행할 콜백함수
+                url: 'ex.json',
+                dataType: 'json',
+                success: function (data) {
+                    // data = [{id :1, name :'자두',.....}]
+                    out = '<tr><th>ID</th><th>name</th><th>price</th><th>description</th></tr>'
+                    $.each(data, function (idx, item) {
+                        out += '<tr><td>' + item.id + '</td><td>' + item.name + '</td><td>' + item.price + '</td><td>' + item.description + '</td></tr>';
+                    }); // each
+                    $('#dataShow').html(out);
+                }   //success
+            }); // ajax
+        }); //jquery
+    </script>
+</head>
+<body>
+    <button> 보기 </button>
+    <table id="dataShow"></table>
+</body>
+</html>
