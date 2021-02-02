@@ -1,0 +1,16 @@
+// 데이터 종류
+
+	1. 데이터 속성 
+		- 명명식 , 순서식 ,구간식 ,비율식
+	
+	2. 변수 타입
+		- 이산형 , 범주형 ,연속형
+	
+	3. 데이터 형
+		1) 기본형 : numeric , logical ,character
+		2) 구조형 : Scalar , Factor , vector, matrix, array
+		3) 복합형 : list, dataframe,datatable
+	
+	4. 특수 : NULL , NA , NaN , Inf
+	
+// 210202 kks

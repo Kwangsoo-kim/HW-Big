@@ -1,0 +1,13 @@
+// 특별한 의미의 예약어
+		
+	1. NULL : Empty value 값이없다. is.null 함수를 사용하여 값이 NULL인지 확인
+
+	2. NA : Not Available 결측치를 의미한다. 값이 없는게 아닌 측정이 되지않아 값을 모른다는 의미
+		is.na 함수를 사용하여 결측치 여부를 확인. 제일 많이 발견된다.
+		** mean(변수,na.rm=T) : na.rm의 파라미터가 T이면 NA값은 계산에서 제외
+	
+	3. NaN : Not a Number 변수의 값이 숫자가 아니다. in.nan 함수를 사용하여 NaN여부 확인
+
+	4. Inf : infinite number 무제한으로 큰 값. is infinite함수를 사용하여 inf 여부 확인
+	
+// 210202 kks
