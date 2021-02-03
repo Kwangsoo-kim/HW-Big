@@ -1,0 +1,34 @@
+// Matrix
+	
+	1. 행렬 : 행과 열을 가지는 2차원 배열. 벡터와 동일하게 한가지 유형의 스칼라 데이터만 저장가능.
+		
+	2. 행렬의 특징
+		- 행렬은 matrix()를 사용해 표현
+			ex) 행렬명 <- matrix( 벡터명, nrow=행수 ,ncol= 열수 ,....)
+		- 열 우선으로 채워진다. **(행 우선 채우기는 byrow =T 속성을 사용해야한다)
+		- 행렬의 행과 열에 명칭을 부여하는 함수 dimnames()
+			ex) dimnames(행렬명)<- list(c('행이름','행이름',..),c('열이름','열이름',..)
+		- 행렬의 차원은 ncol(), nrow()를 이용한다
+		- 행렬끼리의 덧셈이나 뺄셈은 +,-를 사용한다.
+		- 행렬의 곱은 %*%을 사용한다.
+		- 전치행렬 구하는 함수 t()
+		- 역행렬 구하는 함수 solve()
+	
+	3. 행렬의 조회
+		- dim(martrix명) : 행과 열의 개수 조회
+		- nrow(martrix명) : 행의 개수 조회
+		- ncol(martrix명) : 열의 개수 조회
+		- length(martrix명) : 행*열 
+		- dimnames(martrix명) : 행과 열의 이름 조회
+		- rownames(martrix명) : 행 이름 조회
+		- colnames(martrix명) : 열 이름 조회
+	
+	4. 행렬의 데이터 조회 **(A1,B1은 정수)
+		- martrix명[A1:B1,] : A1~B1행 데이터 반환
+		- martrix명[A1,B1] : A1행 B1열 데이터 반환
+		- martrix명[-A1,c(A2,A3)] : A1행을 제외한 행의 A2,A3열 데이터 반환
+		- martrix명[c(T,T,F,F,T),] : 1,2,5행 데이터 반환
+		- martrix명[A1,B1,drop=FALSE] : A1행, B1열 데이터를 matrix 형태로 반환
+
+
+// 210203 kks

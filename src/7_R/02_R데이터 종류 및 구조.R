@@ -523,14 +523,22 @@ gsub('Curly','Eric',s) # 전부 대체
 gsub(' ','',s) #스페이스 없애기 
 
 
+# 외적 : outer; 문자열의 모든 쌍별 조합 만듦
+a<- c('aa','bb','cc')
+b<- c('11','22','33')
+outer(a,b,FUN='paste',sep='~')
+# 날짜 
+today = Sys.Date()
+class(today)
+# %Y : 년도 4자리 %y : 년도 2자리 %m : 월 %d : 일
+thatday = as.Date('2021-04-30','%Y-%m-%d')
+class(thatday)
+thatday
+today < thatday
+if(today<thatday){
+  cat('today 보다 thatday 후')
+}
 
-
-
-
-
-
-
-
-
-
-
+dim(iris)
+colnames(iris)
+str(iris)
