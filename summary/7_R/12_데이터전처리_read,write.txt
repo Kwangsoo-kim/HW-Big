@@ -1,0 +1,10 @@
+// write.table , read.table
+
+	1. write.table() 
+		- write.table(data,file='파일명',sep=',')
+		- R에서도출한 값을 외부 파일로 저장할 수 있게하는 함수
+	
+	2. read.table()
+		- data <- read.table('파일명', header=T,sep=',')
+		- 외부파일을 R로 불러들인다. 
+// 210204 kks
