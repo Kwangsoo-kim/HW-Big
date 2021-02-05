@@ -1,0 +1,33 @@
+// by 
+	
+	1. by 	- 데이터 프레임에 적용되는 tapply를 위한 함수
+		- by(data,indices,FUN,...)
+		- data : R 객체. 일반적으로 데이터 프레임,행렬
+		- indices : 팩터 또는 팩터 리스트
+		- FUN : 데이터의 서브셋에 적용되는 함수
+		- .. : FUN의 인자로 전달한 값
+	
+	2. summaryBy	- 그룹별로 그룹을 특징짓는 통계적 요약 값 계산에 사용.
+			- summaryBy(formula,data,id,FUN,..)
+			- fomula : 포뮬러를 지정
+			- data : 데이터 프레임
+			- id : 출력에 나타나야하는 변수 지정 
+			- FUN : 함수 , 여러개 지정 가능
+	
+	3. orderBy	- 데이터 프레임의 특정 변수로 데이터 프레임의 행을 정렬.
+			order 함수와의 차이점은 정렬하기 위한 변수가 모델 포뮬러에 의해 제공 될 수 있다는 점.
+			- orderBy(formula,data)
+			- formula	 : 포뮬러를 지정
+			- data : 데이터 프레임
+
+	4. sampleBy	- 데이터프레임을 포뮬러의 변수에 따라 분할하고 각각 분할된 그룹에서
+			특정 비율의 샘플을 추출
+			- sampleBy(formula,frac=0.1,replace=FALSE,data,systematic=FALSE)
+			- formula : 포뮬러를 지정
+			- frac : 추출할 샘플의 비율
+			- replace : 복원 추출 여부 
+			- data : 데이터 프레임
+			- sytematic : 계통추출 사용여부
+
+
+// 210205 kks

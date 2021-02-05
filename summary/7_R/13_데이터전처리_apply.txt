@@ -1,4 +1,44 @@
 // apply 
+	
+	1. apply  - 행과 열 단위의 연산을 쉽게 할 수 있도록 지원하는 함수
+		- apply(X,MARGIN,FUN,...)
+		- X : 대상 자료 객체
+		- MARGIN : 차원입력, 1 : 행별 , 2: 열별 , 3: 차원별 
+		- NA값이 있는 경우, na.rm=T 인자를 이용하여 NA를 제거한 상태로 연산할 수 있다.
+
+	2. lapply - apply의 결과를 리스트 형식으로 반환한다.
+		- lapply(X,FUN,..)
+		- X : 벡터 또는 리스트 객체
+		- FUN : 적용할 함수 이름
+
+	3. sapply - simplification apply. lapply와 유사하지만 리스트대신 행령, 벡터등으로 결과를 반환
+		- sapply(X,FUN,..)
+		- X : 대상 리스트 객체
+		- FUN : 적용할 함수 이름
+
+	4. vapply - values simplification apply. sapply 함수와 비슷하지만 FUN의 모든 값이 FUN.VALUE와 
+		호환되는지 확인한다. vapply함수는 FUN.VALUE에 의해 미리 지정된 유형의 반환 값을 가져
+		더 안전 할 수 있다. 
+		vapply(X,FUN,FUN.VALUE,....)
+		- X : 대상 리스트 객체
+		- FUN : 적용할 함수 이름
+		- FUN.VALUE : 반환하는 데이터의 유형을 지정
+	
+	5. mapply - sapply와 유사하지만 다수의 인자를 함수에 넘긴다는 데서 차가 있다. 
+		가변인자를 통해 전달되는 두 번째 인자, 세 번째 인자 등이 첫 번째 인자인 FUN
+		함수의 인자로 적용된다
+		- mapply(FUN,...moreArgs=NULL)
+		- FUN : 적용할 함수 이름
+		- ... : FUN의 인자로 전달할 다른 인자 목록 
+		- moreArgs : FUN 함수에 전달할 다른 인자 목록
+
+	6. tapply - 그룹별 처리를 위한 apply 함수.
+		- tapply(X,INDEX,FUN,...,default=NA)
+		- X : 대상 객체
+		- INDEX : X와 같은 길이의 하나 이상의 factor 목록
+		- FUN : 적용할 함수
+		- ... : FUN의 인자로 전달한 값
+		- default : 기본값은 NA. 결측값일 경우 출력될 값
 
 
-// 210204 kks
+// 210205 kks
