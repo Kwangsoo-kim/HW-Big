@@ -35,12 +35,12 @@ mpg <- as.data.frame(mpg)
 mpg
 
 #head() 앞부분 tail() 뒷부분 view() = edit() 뷰창에서 데이터 확인용
-#dim() 차원 str()구조 summary()
+#dim() 차원 str()구조 y()
 head(mpg)
 edit(mpg)
 view(mpg)
 dim(mpg)
-summary(mpg) # 최소값, 1사분위수 ,중위수 ,3사분위수 , 최대값값
+y(mpg) # 최소값, 1사분위수 ,중위수 ,3사분위수 , 최대값값
 # 변수명 바꾸기 (cty -> city, hwy -> highway)
 install.packages('dplyr')
 library(dplyr)
@@ -71,7 +71,7 @@ midwest <- as.data.frame(midwest)
     # 데이터 파악하기 , 파생변수 만들기 
 head(midwest)
 # 문제 1
-summary(midwest)
+y(midwest)
 dim(midwest)
 str(midwest)
 view(midwest)
@@ -109,19 +109,19 @@ exam %>%
     filter(class==1 & english>=8)
 
 
-# 3.2 필요한 변수 추출하기 : select()
+# 3.2 필요한 변수 추출하기 : ()
 exam %>% 
-    select(class,english,math) #존재하는 항목만 기입가능. 변형x
+    (class,english,math) #존재하는 항목만 기입가능. 변형x
 exam %>% 
-    select(-math) # - 붙이면 그것만 제외하고 나머지 출력 
+    (-math) # - 붙이면 그것만 제외하고 나머지 출력 
 # class가 1과 2의 행중에서 영어,수학 데이터만 출력
 exam %>% 
     filter(class %in% c(1,2)) %>% 
-    select(english,math)
+    (english,math)
 # class가 1,2,3행에서 영,수 데이터만 앞 5개 추출
 exam %>% 
     filter(class %in% c(1,2,3)) %>% 
-    select(english,math) %>% 
+    (english,math) %>% 
     head(5)
 
 # 3.3 정렬하기 : arrange()
@@ -134,7 +134,7 @@ exam %>%  arrange(class, -math) # 추가 조건은 연속 나열하면된다.
 #id가 1부터 10인 학생의 영어,수학성적을 기준으로 오름차순 정렬하고 top 6명 출력
 exam %>% 
     filter(id==(1:10)) %>% 
-    select(english,math) %>% 
+    (english,math) %>% 
     arrange(english) %>% 
     head
 
@@ -148,7 +148,7 @@ head(exam)
 exam %>% 
     mutate(total=math+english+science,
           avg=round((math+english+science)/3)) %>% 
-    select(-id) %>% 
+    (-id) %>% 
     arrange(desc(total)) %>% 
     head
 
@@ -191,7 +191,7 @@ mpg %>%
              ) %>%
     filter(class=='suv') %>% 
     mutate(total=(cty+hwy)/2) %>% 
-    summarise(avgtotal=mean(total)) %>% 
+    ise(avgtotal=mean(total)) %>% 
     arrange(-avgtotal) %>% 
     head(5)
 
@@ -203,33 +203,34 @@ mpg
 mpg %>%
     mutate(group = ifelse(displ<=4,'low4',ifelse(displ>=5,'up5',NA))) %>% 
     group_by(group) %>% 
-    summarise(avgh=mean(hwy)) %>% 
+    ise(avgh=mean(hwy)) %>% 
     filter(!is.na(group))
     
 # Q2
 mpg %>% 
     group_by(manufacturer) %>% 
-    summarise(avgc=mean(cty)) %>% 
+    ise(avgc=mean(cty)) %>% 
     filter(manufacturer %in% c('audi','toyota')) 
     
 
 # Q3
 mpg %>% 
     group_by(manufacturer) %>% 
-    summarise(avgh=mean(hwy)) %>% 
+    ise(avgh=mean(hwy)) %>% 
     filter(manufacturer %in% c('chevrolet','ford','honda'))
 
 #혼자서 해보기2
 
 # Q1
-df<- mpg %>% select(class,cty)
+df<- mpg %>% 
+    select(class,cty)
 head(df)
 
 # Q2
 df %>% 
     filter(class %in% c('suv','compact')) %>% 
     group_by(class) %>% 
-    summarise(avgc=mean(cty))
+    ise(avgc=mean(cty))
 
 # Q3
 mpg %>% 
@@ -237,3 +238,162 @@ mpg %>%
     select(model,hwy) %>% 
     arrange(-hwy) %>% 
     head(5)
+
+# 4. 데이터 합치기 
+    # 열 합치기 : cbind, left_join
+    # 행 합치기 : rbind, bind_rows
+    # cf. merge 
+# 4.1 열 합치기(가로 합치기)
+test1 <- data.frame(id=c(1,2,3,4,5),midterm=c(70,80,90,95,99))
+test2 <- data.frame(id=c(1,2,3,4,5),final=c(90,80,70,60,99),
+                    teacherid=c(1,1,2,2,3))
+teacher <- data.frame(teacherid=c(1,2,3),teachername=c('kim','park','ryu'))
+cbind(test1,test2)
+merge(test1,test2)
+left_join(test1,test2,by='id')
+left_join(test2,teacher,by='teacherid')
+merge(test2,teacher,by='teacherid')
+
+# 4.2 행 합치기 (세로 합치기)
+
+group_a <- data.frame(id=c(1,2,3,4,5),test=c(60,70,80,90,95))
+group_b <- data.frame(id=c(6,7,8,9,10),test=c(90,95,94,93,92))
+rbind(group_a,group_b) # 두 데이터 프레임의 변수가 같을 경우 사용가능
+bind_rows(group_a,group_b)
+group_a <- data.frame(id=c(1,2,3,4,5),test1=c(60,70,80,90,95))
+group_b <- data.frame(id=c(6,7,8,9,10),test2=c(90,95,94,93,92))
+rbind(group_a,group_b) # 변수 이름이 달라서 안된다
+bind_rows(group_a,group_b) # 작동은하나 빈 자리는 NA값 
+merge(group_a,group_b,all=T) # all=T 없으면 작동 x
+
+# 5. 데이터 정제하기 - 결측치(NA),이상치
+# 5.1 결측치 정제하기 
+df <- data.frame(name=c('kim','yi','yun','Ma','park'),gender=c('M','F',NA,'M','F'),score=c(5,4,3,4,NA),income=c(2000,3000,4000,4500,4600))
+df
+is.na(df)
+dim(df)
+table(is.na(df))
+table(is.na(df$gender))
+table(is.na(df$score))
+
+na.omit(df) # 결측치가 하나라도있으면 그행 모두 제거. 간편하지만, 같은 행의 분석에 필요한 열의 정보까지 손실된다는 단점이 있다.
+
+df%>%
+    filter(!is.na(score))%>%
+    summarise(mean_score=mean(score))
+
+mean(df$score,na.rm=T) #결측치를 제거하고 평균을 냄
+tapply(df$score,df$gender,mean,na.rm=T) #결측치를 제거하고 평균을 냄
+
+# 결측치를 대체하기 (평균값, 중앙값)
+x <- c(1,1,2,2,3,3,3,4,4,5,5,100)
+mean(x)
+median(x)
+
+exam <- read.csv('inData/exam.csv',header = T)
+exam
+table(is.na(exam))
+exam[c(3,8,15),'math']<- NA # 인위적으로 결측치 넣기
+exam[c(1,2),'english']<- NA # 인위적으로 결측치 넣기
+exam
+table(is.na(exam))
+apply(exam[3:5],2,mean,na.rm=T)
+tapply(exam[,3],exam$class,mean)
+exam %>%
+    summarise(math=mean(math,na.rm=T),
+              english=mean(english,na.rm=T),
+              science=mean(science,na.rm=T))
+
+# 결측치들을 중앙값으로 대체
+exam$math #결측치 확인
+exam$math <- ifelse(is.na(exam$math),median(exam$math,na.rm=T),exam$math) # mean 대치시에는 round 해주자
+exam$math #결측치 대체됨
+
+exam$english
+exam$english <- ifelse(is.na(exam$english),round(mean(exam$english,na.rm=T)),exam$english)
+exam$english
+
+table(is.na(exam))
+
+exam <- read.csv('inData/exam.csv')
+exam[c(1,3,8),'math'] <- NA
+exam[1:2,'english']<- NA
+exam[1,'science']<- NA
+exam
+
+## 결측치 대체 방법 1 ##
+median <- round(apply(exam[3:5],2,median,na.rm=T))
+median['math']
+median['english']
+median['science']
+exam <- within(exam, { # 결측치 대체하기 위한 블록
+    math<- ifelse(is.na(math), median['math'],math)
+    english <- ifelse(is.na(english),median['english'],english)
+    science <- ifelse(is.na(science),median['science'],science)
+})
+is.na(exam)
+head(exam)
+colSums(is.na(exam)) # 변수별 결측치 갯수 확인
+
+
+## 결측치 대체 방법 2 ##(dplyr)
+colSums(is.na(exam))
+median <- round(apply(exam[3:5],2,median,na.rm=T))
+exam <- exam %>%
+    mutate(
+    math=ifelse(is.na(math), median['math'],math),
+    english=ifelse(is.na(english),median['english'],english),
+    science=ifelse(is.na(science),median['science'],science) 
+    )
+colnames(exam)<-c('id','class','math','english','science')
+exam
+
+# 5.2 이상치 정제
+    # 극단적인 이상치(정상범위 기준에서 벗어난 값)
+    # 논리적인 이상치(성별에 남여가 아닌 값)
+    # 이상치는 결측치로 대체
+
+#논리적인 이상치
+
+outlier<- data.frame(gender=c(1,2,1,3,2),score=c(90,95,100,99,101))
+table(outlier$gender)
+# gender 1은 남, 2는 여, 3은 이상치 처리
+outlier$gender <- ifelse(outlier$gender!=1&outlier$gender!=2,NA,outlier$gender)
+outlier
+# score 가 100 초과하는 경우 이상치 처리
+outlier$score <- ifelse(outlier$score >100,NA,outlier$score)
+outlier
+
+# (2) 정상범위 기준으로 많이 벗어난 이상치 : 상하위 0.3% 또는 평균+3*표준편차 
+
+mpg <- as.data.frame(ggplot2::mpg)
+mpg$hwy
+mean(mpg$hwy) +3*sd(mpg$hwy)
+mean(mpg$hwy) -3*sd(mpg$hwy)
+boxplot(mpg$hwy)
+# stats : boxplot의 통계치
+result <- boxplot(mpg$hwy)$stats
+result
+
+#극단치 기준점
+result[1]
+result[5]
+mpg$hwy <- ifelse(mpg$hwy>result[5] | mpg$hwy<result[1], NA,mpg$hwy)
+table(is.na(mpg$hwy))
+mpg$hwy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
