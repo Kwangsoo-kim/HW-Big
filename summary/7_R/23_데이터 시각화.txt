@@ -1,0 +1,27 @@
+// 데이터 시각화
+
+	1. base graphics system - 전통적인 함수 이용.정교한 그래프 이용시 노력이 필요하다. 
+    			 그래프 종류별 함수가 각기 달라 정교한 그래프 이용시 주의.
+
+
+	2. grid graphics system - base graphics system 한계 극복을 위해 탄생한 패키지(ggplot2)
+    			 유연한 그래프 환경 제공.
+
+	3. 그래프 함수
+		
+		3.1 고수준 그래프 함수 : plot, barplot,boxplot,hist,pie,...
+		- 그래프 함수를 호출할 때 마다, 그래프 영역에 새로운 그래프를 시작
+			- plot : 일반적으로 산점도 그래프
+			- barplot : 막대 그래프
+			- boxplot : 사분위수 그래프 
+			- histogram : 도수분포표
+			- pie : 파이형분포표
+			- mosaicplot
+		
+		3.2 저수준 그래프 함수 : lines, abline(회귀라인), point, text,....
+		- 그래프 함수를 호출할 때, 이미 그려진 그래프 위에 점, 라인, 글씨를 추가함.
+			- points : 그래프에 표시하고싶은 곳에 표시
+			- lines : 그래프에 선을 넣어준다
+			- abline : 회귀식선
+			- text : 그래프에 텍스트삽입하게 해줌
+// 210210 kks
