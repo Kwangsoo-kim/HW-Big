@@ -1,0 +1,32 @@
+// ggplot2
+
+	1. ggplot2 - 시각화를 더 편리하게 하기위한 패키지 
+
+		1.1 기하객체
+			- geom_point() : 산점도
+			- geom_smooth() : 회귀선
+			- geom_line() : 선 그래프
+			- geom_histogram() : 히스토그램
+			- geom_density() : 밀도 그래프
+			- geom_bar() : 막대 그래프, 도수분포표
+			- geom_pointrange() : 값과 범위 표시
+			- geom_hline() : 가로선
+		1.2 미적 속성
+			- x,y : x,y 좌표의값
+			- col : 색상 분류 기준
+			- shape : 점의 모양 분류 기준
+			- size : 점의 크기
+			- alpha : 투명도
+			- fill : 채워넣는 색
+
+	2. 사용 EX
+		- ggplot( data, aes( x= , y=))+
+			기하객체
+		- 모든 변수는 aes함수 안에 넣어야 인식된다.
+	
+	3. 차트 분할 출력
+		- gridExtra 패키지를 사용
+		- grid.arrange(ggplot1,ggplot2,ncol=,nrow=) 
+			
+
+// 210210 kks
