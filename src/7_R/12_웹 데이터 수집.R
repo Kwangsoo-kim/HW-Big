@@ -124,3 +124,132 @@ wordcloud(words=df_word$word,
           scale = c(4,1),
           colors = pal)
 
+
+
+# 2. 동적 웹크롤링(셀레니움 패키지 이용) : 스크롤다운, 로그인이후...
+# 특정 폴더 생성후 3개의 파일을 다운받아 압축을 풀고 셀레니움 서버 가동
+
+# 필요한 패키지 다운로드와 로드
+library(httr)
+library(rvest)
+install.packages("RSelenium")
+library(RSelenium)
+
+# # # # 셀레니움 동적 웹 크롤링 준비 
+
+
+# 예제 1. 특정부분에 text를 입력한 후 엔터한 결과를 크롤링
+
+remDr <- remoteDriver(port=4445L,
+                      browserName='chrome')
+remDr$open()
+remDr$navigate('https://www.youtube.com')
+
+
+# 서치창 가져오기
+welElem <- remDr$findElement(using = 'css',
+                             '#search')
+welElem$sendKeysToElement(list('과학 다큐 비욘드', key='enter'))
+
+# 현재 페이지의 소스 가져오기
+html <- remDr$getPageSource()[[1]] 
+html <- read_html(html)
+
+# '#video-title' css안의 text 가져오기
+youtube_title <- html%>%
+    html_nodes('#video-title')%>%
+    html_text()
+head(youtube_title)
+
+# 문자 정제제
+youtube_title <- gsub('\n','',youtube_title)
+youtube_title <- trimws(youtube_title) #텍스트 앞뒤 스페이스 제거
+head(youtube_title)
+
+# url
+youtube_title_url <- html%>%
+    html_nodes('#video-title')%>%
+    html_attr('href')
+
+youtube_title_url <- ifelse(is.na(youtube_title_url),'',paste0('https://www.youtube.com',youtube_title_url))
+
+head(youtube_title_url)
+
+# youtube_title만 text파일로 out
+write.table(youtube_title,
+            file='outData/과학다큐결과.txt',
+            sep=',',
+            row.names=F,
+            quote=F)
+
+#csv
+result <- cbind(youtube_title,youtube_title_url)
+write.csv(result,
+          file='outData/과학다큐결과.csv',
+          row.names=F)
+
+# 예제2. 마우스를 스크롤 다운한 후 크롤링(댓글)
+
+remDr <- remoteDriver(port=4445L,
+                      browserName='chrome')
+remDr$open()
+remDr$navigate('https://youtu.be/tZooW6PritE')
+
+btn <- remDr$findElement(using='css selector',
+                         value='.html5-main-video')
+btn$clickElement() # 메인 동영상 플레이 멈춤
+
+# 마우스 스크롤 다운
+remDr$executeScript('window.scrollTo(0,23000)')
+
+# 현재 페이지의 html 소스 가져오기
+html <- remDr$getPageSource()[[1]]
+html <- read_html(html)
+
+# 댓글만 추출
+comments <- html%>%
+    html_nodes('#content-text')%>%
+    html_text()
+head(comments)
+
+# 저장
+write.table(comments,
+            file='outData/댓글.txt',
+            sep=',',
+            row.names=F,
+            quote=F)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
