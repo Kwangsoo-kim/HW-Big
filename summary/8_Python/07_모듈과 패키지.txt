@@ -1,0 +1,26 @@
+// 모듈과 패키지
+
+	1. 모듈 
+		- 파이썬 모듈은 파이썬 정의와 문자을 담고 있는 파일. 200 여개의 파이썬 모듈이
+		파이썬 인터프리터에 포함되어있다.
+
+	2. 불러오기
+		- import A - A모듈을 가져옴
+		- import A as B - A모듈을 B이름으로 가져옴
+		- from A import B - A 모듈안에 B함수(A패키지안에 B모듈)을 가져옴
+		- from A import B as C -  A 모듈안에 B함수(A패키지안에 B모듈)을 C이름으로 가져옴
+		- from A.B import C - A패키지안에 B모듈안에 C함수를 가져옴
+		- from A.B import C as D - A패키지안에 B모듈안에 C함수를 D이름으로 가져옴
+
+	3. 임의 모듈 불러오기
+		- import sys
+		- sys.path.append(모듈경로)
+		-import 모듈명
+	
+	4. 특수속성들
+		- __init__ - 초기화 메소드. 패키지로 인식되게 해준다.
+		- __all__  - import할 수 있는 모듈을 정의
+		- __path__ - 절대경로의 변경
+		- __file__ - 현재 수행중인 코드를 담고있는 파일의 위치한 path를 알려줌
+
+// 210225 kks
