@@ -1,0 +1,19 @@
+// 파일 i/O 프로그래밍_ open,pickling
+	1. 파일 입출력 : open() - 파일 객체를 반환하는 함수를 사용한다. 마지막에 꼭 close()해줘야한다.
+			- file_obj = open(file_name,mode,encoding='')
+			- file_obj - 파일객체, readlines() 함수나, write() 함수로 이용
+			- mode 	- r : 읽기 모드
+				- w : 쓰기 모드
+				- a : 추가 모드
+				- b : 바이너리모드, 피클과 사용
+	
+	2. with 구문 : with open(file_name,mode,encoding='') as f 
+			로 사용하면 close()안해줘도 된다. 자주 사용하는 방법.
+	
+	3. 피클링 - pickle 임폴트 하여 사용. 
+		- 파이썬 객체 계층 구조를 바이트 스트림으로 변환
+		- mode 'wb' , pickle.dump 로 데이터를 쓰고, mode 'rb' , pickle.load로 데이터를 불러온다.
+		- 사용방법에 있어서 편의성은 있으나 내보낸 파일을 메모장으로는 못읽어온다.
+
+
+// 210303 kks

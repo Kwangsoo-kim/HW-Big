@@ -1,0 +1,20 @@
+// 파일 i/O 프로그래밍_ csv
+	1. CSV 파일 데이터 입출력
+		- CSV 모듈을 불러와 reader(), writer() 함수로 사용한다.
+		- 불러올 데이터나 쓸 데이터의 자동 형변환은 다음을 입력한다. 
+		reader,writer 사용법 동일 ex> reader(내부입력) 
+		   * quotechar='"',quoting=csv.QUOTE_NONNUMERIC 
+	
+	2. 딕셔너리형식으로 불러오기
+		- DictReader() 함수를 사용한다. 데이터에 header 정보가 없을경우
+		fieldnames를 입력하여, header를 만든후 출력한다. 
+		- 행에 필드 이름보다 많은 필드가 있다면 restkey를 입력하여 나머지 데이터가
+		restkey속성에 지정된 필드 이름에 저장되게 할 수 있다.
+
+	3. 딕셔너리형식으로 내보내기
+		- DictWriter() 함수를 사용한다. 데이터의 header는 fieldnames에 받아서 저장한다.
+		- extrasaction = 'ignore'를 입력할 경우 데이터에 필드네임에 없는 값이 있을경우 
+		에러를 발생시키지않고, 해당 데이터를 무시하고 입력한다.
+		- writeheader()함수를 통해서 필드네임을 저장한다.
+
+// 210303 kks
