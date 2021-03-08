@@ -1,0 +1,26 @@
+// Pandas
+
+	1. 기초 통계 분석
+		- Pandas에서 제공하는 통계분석함수는 기본적인 기술통계 및 데이터 요약을 가능하게 한다.
+			- count( ) : NA를 제외한 개수
+			- min( ) : 최소값
+			- max( ) : 최대값
+			- sum( ) : 합
+			- cumprod( ) : 누적합
+			- mean( ) : 평균
+			- median( ) : 중앙값
+			- quantile( ) : 분위수
+			- corr( ) : 상관계수
+			- cov( ) : 공분산
+			- var( ) : 분산
+			- std( ) : 표준편차	
+			- describe( ) : 요약 통계량
+
+	2. describe( )
+		 - DataFrame.describe(percentiles , include, exclude)
+		 	- percentiles : 출력에 포함될 백분위 수를 0~1사이의 값으로 지정. 기본값은[0.25,0.5,0.75]
+			- include : 출력에 포함될 데이터의 유형을 지정 , 기본값은 숫자 타입 열들만 출력 , all 모든열, 정수형 int64
+				실수형 float64, 논리형 bool
+			- exclude : 출력에 제외될 데이터의 유형을 지정,  기본값은 아무것도 지정하지 않은 상태
+			- 기본값은 숫자형만 출력된다.
+// 210308 kks

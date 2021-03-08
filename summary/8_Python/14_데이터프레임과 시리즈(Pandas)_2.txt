@@ -1,0 +1,26 @@
+// Pandas
+
+	1. DataFrame의 항목 삭제
+		- DataFrame.drop(labels,axis,inplace)
+			- labels : 삭제할 index 또는 컬럼의 이름을 지정
+			- axis : 0=index,1=columns
+			- inplace : False가 기본값이며, True로 쓰면 해당변수에 drop된 값을 할당한다.
+
+		- labels에 list로 삭제열을 입력하면 복수열 삭제 가능하다.
+
+	2. DataFrame의 항목 추가
+		- 열추가 : DataFrame['추가열이름'] = 값 
+			- 값하나만 넣어서 전체를 한값으로 통일 할 수 있고, 리스트로 값을 인덱스 수만큼 일일히 지정하여 넣을 수 있다.
+			- 값에 None 값을 입력하면 None 값으로 데이터가 입력된다.
+			- 그 열의 데이터타입에 따라 None값이 NaN값이 될 수도있다.
+			- 값에는 pd.Series( )함수 사용해 열값을 지정할 수 있다. 
+		- 행추가 
+			- 딕셔너리로 행 추가 : append(newdata,ignore_index=True)로 추가
+			- 시리즈,리스트로 행 추가 : list를 series 객체로 변환후 append(newdata,ignore_index=True) 로 추가 	
+	
+	3. 정렬
+		- DataFrame.sort_index( ) 
+			- 행 또는 이름으로 정렬한다. axis =1 입력시 열의 이름순으로 정렬해준다.
+		- DataFrame.sort_values( ) 
+			- 데이터 값을 기준으로 정렬한다. by=['컬럼명'] 입력 
+// 210308 kks
