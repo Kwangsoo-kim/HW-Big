@@ -1,0 +1,12 @@
+// N차원 배열_Numpy
+
+	1. 선형대수학
+		- 2차원 numpy 배열을 조작, 계산가능하게 하는 함수
+			- 행렬곱 : @ 또는 np.dot( )
+			- 역행렬 : np.lialg.inv( )
+			- 전치행렬 : x.T , x.transpose( )
+			- 단위행렬 : np.eye( )
+			- 대각합 : np.trace( )
+			- 연릭방정식 해 풀기 : np.linalg.solve(a,b)
+
+// 210309 kks
