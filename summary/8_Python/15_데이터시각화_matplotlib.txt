@@ -1,0 +1,31 @@
+// matplotlib
+
+	1. matplotlib : 그래프 시각화에 용이한 패키지
+		- 그래프 그리기 순서
+			- 1) 데이터준비
+			- 2) 그래프생성
+			- 3) 그래프 함수로 그리기
+			- 4) 그래프 커스터마이징
+			- 5) 그래프 출력 및 저장
+		- import matplotlib.pyplot as plt 로 불러온다.
+		- %config InlineBackend.figure_format = 'retina' : 그래프 해상도를 올려준다.	
+		
+
+	2. 그래프 객체 : figure 객체로 maplotlib에서 그래프를 그리기 위한 객체이다.
+		- plt.figure(figsize) : 대체로 사이즈 조절에 사용
+
+	3. 선그래프 plot
+		- plt.plot( x , y , color , linewidth,...)
+			- x : x축 값
+			- y : y축 값
+			- color : 그래프 색
+			- linewidth : 그래프 두께
+		- plt.show() : 브라우저에 그래프를 띄운다.
+		
+	4. 산점도 scatter
+		- plt.satter(x,y,s,c,alpha,..)
+			- x : x축 값
+			- y : y축 값 
+			- c : 점 색
+			- alpha : 투명도
+// 210310 kks
