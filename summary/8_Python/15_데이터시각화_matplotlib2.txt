@@ -21,4 +21,4 @@
 			legend( ) 함수의 labels 파라미터에 할당해준다.
 		- 그래프 저장
 			- matplotlib.pyplot.savefig('파일명') : 해당 폴더에 저장된다.
-// 210310 kks
+// 210311 kks
