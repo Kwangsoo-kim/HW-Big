@@ -1,0 +1,24 @@
+// matplotlib
+
+	1. 그래프 커스터 마이징
+		- 선 모양수정 함수 : linestyle,linewidth
+		- 그래프 내 텍스트삽입 함수: text( ),annotate( )
+		- 수학기호 입력가능
+		- 축과 눈금 수정 함수 
+			xlime( ) - X축 범위설정 ,ylime( ) - Y축 범위설정
+			xlabel( ) - X축 레이블 설정, ylabel( ) - Y축 레이블 설정
+			xticks( ) - X축 눈금 위치를 리스트 형식으로 지정 , yticks( ) - Y축 눈금 위치를 리스트 형식으로 지정
+			xticklabels( ) - X축 눈금 레이블 리스트형식 지정, yticklabels( ) - Y축 눈금 레이블 리스트형식 지정
+			spine속성 - 그래프의 박스 경계 설정 , grid(True) - 눈금선
+		- 축 공유 : 하나의 그래프 영역에 두 개 이상의 그래프를 그리면서 다른 축을 지정하고 싶은 경우 사용
+			- twinx ( ) : x축을 공유하고 y축을 오른쪽에 표시 축객체를 반환한다.
+			- tiwny ( ) : y축을 공유하고 x축을 위쪽에 표시  축객체를 반환한다.
+		- 그래프 제목과 축 제목
+			- plot.suptitle( ) : 총 그래프의 제목
+			- set_title( ) : 해당 그래프 제목
+		- 범례표시
+		 	- matplotlib.pyplot.legend() : 입력해주면 범례 생성 , plot( ) 함수에 label 속성을 설정해주거나 없다면
+			legend( ) 함수의 labels 파라미터에 할당해준다.
+		- 그래프 저장
+			- matplotlib.pyplot.savefig('파일명') : 해당 폴더에 저장된다.
+// 210310 kks

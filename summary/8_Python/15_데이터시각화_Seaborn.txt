@@ -1,0 +1,36 @@
+// Seaborn
+
+	1. Seaborn : matplotlib 기반으로 만든 고수준 그래픽 라이브러리
+		- 그래프 그리는 단계
+			- 1) 데이터 준비
+			- 2) 미적속성 설정
+			- 3) 함수를 이용하여 그래프 그리기
+			- 4) 그래프 출력, 저장
+
+ 	2. 미적 속성 설정
+		- seaborn.set(style,font_scale,context,palette,...)
+			- style : 뒷배경 (white(기본),whitegrid,dark,darkgrid,...)
+			- font_sacle : x,y레이블 폰트 사이즈
+			- context : 레이블의크기, 선 ,점 등에 영향 (notebook(1배율,기본),paper(0.8),talk(1.3),poster(1.6),..)
+			- palette : 색상 파레트 지정
+	
+	3. 그래프 종류
+		- Relational plots : 관계형 그래프( 연속 데이터)
+			- scatterplot : 산점도 그래프
+			- lineplot : 선 그래프
+			- relplot : 서브플롯을 표현할 수 있다. kind에 출력을 원하는 그래프 타입 입력
+				 col 단위로 서브플롯을 표현한다. 
+		- categorycal plots : 범주형 그래프 
+			- stripplot : 축이 범주형일때 사용하는 산점도 그래프
+			- swarmplot : 축이 범주형일때 사용하는 산점도 그래프. 산점도들이 중첩되지 않게 표시한다.
+			- barplot : 막대그래프로 기본적으로 평균을 나타내주고, 95% 신뢰구간도 나타낸다.
+			- catplot : 서브플롯을 표현할 수 있다. kind에 bar를 입력하고 ,col 단위로 서브플롯을 표현한다.
+			- countplot : 개수를 카운트해주는 막대그래프
+			- boxplot,violinplot,boxenplot : 4분위수와 분포정도를 나타내주는 그래프로 boxen은 두개다 섞여있다.
+		- 회귀 그래프
+			- lmplot : 회기모형을 만들어 표시하는 그래프 
+		- 행렬 그래프
+			- heatemap
+		- 다중 그래프를 위한 FacetGrid
+			
+// 210310 kks
