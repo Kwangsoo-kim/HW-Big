@@ -1,0 +1,15 @@
+// Beautifulsoup
+	
+	1. Beautiful Soup 
+		- 스크린 스프래핑 프로젝트를 위해 설계된 파이썬 라이브러리
+		- 들어오는 문서를 유니코드로 보내고 문서를 UTF-8로 자동변환
+		- lxml 및 html5lib같은 파이썬 parser 라이브러리 사용가능
+		- 가장 일반적으로 사용되는 CSS 선택자를 지원한다.
+	
+	2. parser 라이브러리
+		- 파이썬의 html.parser : 보통속도
+		- lxml's HTML parser : 매우빠른 속도, 외부 C에 의존해야하는 단점
+		- lxml's XML parser : 매우빠른 속도, 외부 C에 읜존해야하고 XML parser만 지원
+	
+		
+// 210317 kks
