@@ -1,0 +1,10 @@
+// Selenium
+
+	1. Selenium
+		- 브라우저의 동작을 자동화 해주는 프로그램이다.
+		- webDriver를 통해 브라우저를 제어한다. 따라서 사용할 브라우저에 맞는 webDriver를 구비해야한다.
+		- driver.find_ : 해당 페이지에서 본인이 원하는 종류의 선택자로 원하는 소스를 가져올 수 있다.
+		- Keys - selenium내부에 Keys를 import하여 사용가능 이벤트 처리가 가능하다.
+		- 모든 처리가 끝나고 driver.close()를 해주는게 좋다.
+		
+// 210317 kks

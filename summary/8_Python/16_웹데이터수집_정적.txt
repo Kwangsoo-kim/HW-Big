@@ -11,5 +11,8 @@
 		- lxml's HTML parser : 매우빠른 속도, 외부 C에 의존해야하는 단점
 		- lxml's XML parser : 매우빠른 속도, 외부 C에 읜존해야하고 XML parser만 지원
 	
+	3. requests
+		- 파이썬에서 HTTP 요청을 만들기 위한 사실상의 표준
+		-requests.get(url).content로 해당 url의 응답내용을 바이트 단위로 받아 올 수 있다.
 		
 // 210317 kks
