@@ -1,0 +1,17 @@
+// callback
+
+	1. Callback : 머신러닝에선 과적합, 오버피팅이 나올 수 없지만, 딥러닝에서는 발생할 수 있다.
+		그에 따라 오버피팅하기 전에 epoch를 조절할 수 있게 해주는 함수를 callback 함수라고 한다.
+
+	2. EarlyStopping : tensorflow.keras.callbacks 안에 EarlyStopping이라는 API가 존재한다.
+		       fit중에 callbacks에 EarlyStopping 객체를 넣어줌으로써 콜백을 실행 할 수 있다.
+		- EarlyStopping 객체 생성시 아무런 인자없이 만들면 val_loss가 한번나와도 epoch를 종료. 성급한 조기종료를 한다.
+		  이는 val_loss값의 도출에 있어 신뢰도가 낮게 될 가능성이 있다.
+		- 그래서 EarlyStopping 객체 생성시 patience에 정한 인자 수 만큼 val_loss가 올라도 epoch를 진행 해준다.
+		 patience를 조절하며 값을 도출해서 적절한 조기종료를 가능하게 해준다.
+	
+	** Dropout : EarlyStopping으로 patience를 조절한다고 하여도, 원하는 epochs만큼 학습을 못할 수 있기 때문에
+		    EarlyStopping없이 과적합을 조정하기 위해 사용된다.
+		- layer 사이 사이에 위치하며 인수를 조절하여 과적합율을 줄이기 위해 이용된다.
+
+// 210324 kks
