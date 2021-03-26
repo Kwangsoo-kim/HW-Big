@@ -1,0 +1,25 @@
+// NLTK
+
+	1. NLTK : 교육용으로 개발된 자연어 처리와 문서 분석용 패키지
+		- corpus, tokenizing, morphological analysis, POS tagging 제공
+		- corpus : 말뭉치라 하며, 자연어 처리에 필요한 데이터를 제공해준다.
+			 nltk.download() 로 사용가능
+		- Text 클래스 : Text 클래스를 통해 plot이나 지정한 단어가 얼마나 많이 나타나는지
+			      빈도표 제공. dispersion_plot( )
+		- FreqDist 클래스 : 문서에 사용된 단어의 사용빈도 정보를 출력해준다.
+		
+	2. tokenizing
+		- sent_tokenize( ) : 문자열을 입력받아 문장 단위의 토큰리스트 출력
+		- word_tokenize( ) : 문자열을 입력받아 단어 단위의 토큰리스트 출력
+		- RegexpTokenizer : 토큰화에 포함할 문자들을 정규표현식을 이용해 토큰리스트 출력
+
+	3. morphological analysis
+		- 단어로 부터 어근, 접두사 ,접미사, 품사 등 언어적 속성을 파악하고 이를 
+		  이용하여 형태소를 찾아내 처리하는 작업
+		- 어간 추출(Stemming) : PoterStemmer, LancasterStemmer, RegexpStemmer
+		- 원형복원(Lemmatizing) : 어간 추출시 의미가 달라질 수 있어 원형복원을 함.
+				         WordNetLemmatizer( )
+		- 품사 태깅(POS Tagging) : 문장 내 단어들의 품사를 식별하여 태그를 붙여서 출력
+				         pos_tag( ) 
+	
+// 210326 kks

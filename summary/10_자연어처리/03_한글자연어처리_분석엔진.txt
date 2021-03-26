@@ -1,0 +1,22 @@
+// 한글자연어 처리 분석엔진 (KoNLPy 제공)
+
+	1. Hannanum : 카이스트 SWRC에 의해 개발된 자바기반 형태소 분석기
+		- analyze(phrase) : 각 토큰에 대한 다양한 형태소 후보를 반환
+		- morphs(phrase) : 형태소 분석 문구 반환
+		- nouns(phrase) : 명사를 추출
+		- pos(phrase,flatten=True,ntags=9) : 품사태깅. ntangs 는 태그 수,
+					flatten이 False이면 어절을 보존해준다.
+
+	2. Kkma : 서울대학교 IDS에서 개발된 자바기반 형태소 분석기
+		- morphs(phrase) : 형태소 분석 문구 반환
+		- nouns(phrase) : 명사를 추출
+		- pos(phrase,flatten=True,ntags=56) : 품사태깅. ntangs 는 태그 수,
+					flatten이 False이면 어절을 보존해준다.
+
+	3. KOMORAN : Shineware에서 자바기반 오픈소스 형태소 분석기
+		- morphs(phrase) : 형태소 분석 문구 반환
+		- nouns(phrase) : 명사를 추출
+		- pos(phrase,flatten=True,ntags=42) : 품사태깅. ntangs 는 태그 수,
+					flatten이 False이면 어절을 보존해준다.
+
+// 210326 kks

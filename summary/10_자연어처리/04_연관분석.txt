@@ -1,0 +1,25 @@
+// 연관분석
+
+	1. 연관분석 개요
+		- 데이터들 사이에 자주 발생하는 속성을 찾고 그 속성들 사이에 연관성이
+		  어느정도 있는지를 분석하는 방법
+		- 활용분야  : 상품진열, 사기보험 적발, 카탈로그 디자인, 신상품 카테고리 구성,...
+		- 연관성 분석 관련 지표
+			- 지지도(support) : 조건결과 항목수 / 전체수
+			- 신뢰도(Confidence) : 조건결과 항목수 / 조건항목수
+			- 향상도(lift) : 우연히 발생한 규칙인지 아닌지 여부
+			                = 조건결과 지지도  / (조건지지도) * (결과지지도)
+				    1 : 상관관계 없음 , 1이상 : 양의 상관관계 , 1이하 : 음의 상관관계
+
+	2. 연관분석 
+		- 트랜잭션 : 서로 관련 있는 데이터의 모음으로 연관분석에 필요한 데이터
+		-python은 apyori 패키지를 이용하며 apriori 클래스를 사용하여 연관분석한다.
+		- apriori 파라미터
+			 - min_support , min_confidence 에 출력할 최저 수치를 입력한다. 
+		- 객체는 list에 넣어 출력하며 , 튜플형식으로 저장되어있다.
+		- 튜플형식은 다음과 같고 아래 내용에서 필요한 부분만 취할 필요가 있다
+			- SupportRecord = namedtuple( 'SupportRecord', ('items', 'support'))
+			- RelationRecord = namedtuple( 'RelationRecord', SupportRecord._fields + ('ordered_statistics',))
+			- OrderedStatistic = namedtuple( 'OrderedStatistic', ('items_base', 'items_add', 'confidence','lift',))
+
+// 210326 kks 

@@ -1,0 +1,29 @@
+// 워드클라우드
+
+	1. 워드클라우드 : 단어를 출현 빈도에 비례하는 크기로 단어의 빈도수를 시각화하는 기법
+		- pip install wordcloud 로 패키지 설치 필요함
+		- matplorlib과 같이 사용함
+		- WordCloud( ) 객체를 만들어서 사용
+			- WordCloud 파라미터 
+				- background_color : 배경색 지정
+				- max_words : 출력할 최대 단어 개수
+				- font_path : 한글은 출력시 깨지기 때문에 한글폰트 지정해주어야함
+				- relative_scaling : 글자크기배수
+				- stopwords : 불용어 지정
+				- mask : 마스킹 지정
+		- 객체 생성후  객체.generate(text) 하면 준비가 끝난다.
+		- plt.imshow(객체 , interpolation = 'bilinear') 로 출력 
+
+	2. 불용어 사전 추가 : 워드클라우드에서 쓸데없는 용언을 제거하여 출력할 수 있게한다.
+		 - wordcloud 패키지에 STOPWORDS 를 사용하거나, sklearn.feature_extraction.stop_words의
+		   ENGLISH_STOP_WORDS 를 사용한다. 혹은 둘다 사용 가능 
+		- 본인이 원하는 임의의 단어를 불용어 지정하고 싶다면 set( )안에 list 형식으로 넣는다.	
+		- 사용은 WordCloud 객체 파라미터 stopwords 에 지정해주면 된다.
+
+	3.  마스킹 : 워드클라우드 결과를 본인이 원하는 형태로 출력할 수 있게 해준다.
+		- from PIL import Image, import numpy as np
+		- 이미지를 불러올시 convert해야하는데 png 는 'RGBA' jpg 는 'RGB' 를 입력한다.
+		- 마스킹 이미지를 뽑고 넘파이 배열로 변환해준다.
+		- 실행은 Wordcloud 객체 파라미터 mask에 지정해주면 된다.
+
+// 210326 kks
