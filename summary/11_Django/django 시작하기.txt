@@ -1,0 +1,6 @@
+pip install django
+1. 새로운 장고 프로젝트 생성
+	(cmd창 django-admin startproject ch01)
+2. 새로운 앱 생성
+	(python manage.py startapp hello)
+3. 프로젝트 /settings.py의 INSTALLED_APPS에 앱등록
